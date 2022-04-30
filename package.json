@@ -1,0 +1,30 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "A portfolio of the project I've worked on",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherNoelGoldsmith/myportfolio.git"
+  },
+  "keywords": [
+    "christopher",
+    "goldsmith",
+    "jquery",
+    "javascript",
+    "react",
+    "css",
+    "sass",
+    "node",
+    "html"
+  ],
+  "author": "Christopher Noel Goldsmith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristopherNoelGoldsmith/myportfolio/issues"
+  },
+  "homepage": "https://github.com/ChristopherNoelGoldsmith/myportfolio#readme"
+}
