@@ -1,0 +1,58 @@
+@use 'styles';
+
+section#contact-me {
+    @include styles.flexit;
+    flex-direction: column;
+    margin: 25vh 0;
+    height: 75vh;
+
+    form {
+        @include styles.flexit;
+        flex-direction: row;
+        padding: 2%;
+
+        input,
+        textarea {
+            border: none;
+            border-radius: 5%;
+            padding: 2%;
+            width: 25vw;
+            margin: 2vh 5px;
+        }
+
+        div#inputs {
+            @include styles.flexit;
+            flex-direction: column;
+        }
+
+        div#textarea-submit {
+            @include styles.flexit;
+            flex-direction: column;
+            justify-content: space-between;
+
+            textarea {
+                margin-top: auto;
+                width: 25vw;
+            }
+
+            input#submit-btn {
+                font-size: 1.5rem;
+                font-weight: 1000;
+                width: 15vw;
+            }
+
+            #submit-btn:hover {
+                opacity: 0.7;
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section#contact-me {
+        form {
+            flex-direction: column;
+        }
+    }
+}

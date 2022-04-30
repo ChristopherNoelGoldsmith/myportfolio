@@ -1,0 +1,51 @@
+@use 'styles';
+
+section#about-me {
+    @include styles.flexit;
+    flex-direction: column;
+    background: orange;
+    height: 100vh;
+    margin: 10vh auto 20vh auto;
+
+    header {
+        h1 {
+            font-size: styles.$heading-font-size;
+            border-bottom: black 2px dotted;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+        }
+    }
+
+    div {
+        @include styles.flexit;
+        flex-direction: row;
+        width: 85vw;
+        padding: 5vh 5vw;
+
+        figure {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: red;
+            padding: 10%;
+        }
+
+        div#about-me-details {
+            padding: 10%;
+            @include styles.flexit;
+            flex-direction: column;
+
+            h2 {
+                margin-bottom: 2vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section#about-me {
+        flex-direction: column;
+    }
+}

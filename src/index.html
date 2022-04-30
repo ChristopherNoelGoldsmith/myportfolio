@@ -6,7 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport"
             content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles/navbar.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/about_me.css">
+        <link rel="stylesheet" href="styles/my_tech_stack.css">
+        <link rel="stylesheet" href="styles/project_showcase.css">
+        <link rel="stylesheet" href="styles/contact-me.css">
         <script src="./scripts/app.js"></script>
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -23,9 +28,18 @@
 
             <nav id="nav">
                 <ul id="navbar-items">
-                    <li>Contact Me</li>
-                    <li>Resume</li>
-                    <li>Github</li>
+                    <li><a href="#contact-me">Contact Me</a></li>
+                    <li><label for="github">Github</label><a id="github"
+                            href=""><i class="fa-brands fa-github"></i></a>
+                    </li>
+                    <li><label for="resume">Resume</label><a id="resume"
+                            href=""><i
+                                class="fa-solid fa-file-user"></i></a>
+                    </li>
+                    <li><label for="linkedin">Linkedin</label><a
+                            id="linkedin" href=""><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </li>
                 </ul>
             </nav>
 
@@ -33,31 +47,36 @@
 
         <main>
             <!--About me section-->
-            <section id="about-me">
+            <section id="about-me" class="lite">
 
                 <header>
                     <h1>Christopher Goldsmith</h1>
                     <h3>Front-End Developer</h3>
                 </header>
+                <div>
+                    <figure for="my-image">
+                        <img id="my-image" src=""
+                            alt="An image of the developer Christopher">
+                    </figure>
 
-                <figure for="my-image">
-                    <img id="my-image" src=""
-                        alt="An image of the developer Christopher">
-                </figure>
-
-                <div id="about-me-details">
-                    <h2>About Me</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Consectetur amet nam, nihil distinctio
-                        eveniet earum maiores est pariatur magnam tenetur
-                        nostrum at officiis corporis facere a! Quibusdam
-                        dignissimos fugit minima.</p>
+                    <div id="about-me-details">
+                        <h2>About Me</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur
+                            adipisicing
+                            elit. Consectetur amet nam, nihil distinctio
+                            eveniet earum maiores est pariatur magnam
+                            tenetur
+                            nostrum at officiis corporis facere a!
+                            Quibusdam
+                            dignissimos fugit minima.</p>
+                    </div>
                 </div>
+
 
             </section>
             <!--The section showing the tech skills I have-->
-            <section id="my-tech-stack">
-                <h2>HTML CSS JAVASCRIPT SASS REACT BOOTSTRAP GIT NPM
+            <section id="my-tech-stack" class="lite">
+                <h2>Things I'm Skilled In
                 </h2>
                 <figure for="tech-stack-icons">
                     <i class="fa-brands fa-html5"></i>
@@ -71,44 +90,60 @@
                 </figure>
             </section>
             <!--The showcasing of my projects-->
-            <section id="project-showcase">
+            <section id="project-showcase" class="lite">
 
-                <figure class="project" for="weather-stack">
-                    <img id="weather-stack" src="" alt="">
-                </figure>
+                <h2>Some of my work</h2>
 
-                <figure class="project">
-                    <img src="" alt="">
-                </figure>
+                <div id="projects">
+                    <figure class="project" for="weather-stack">
+                        <img id="weather-stack" src="" alt="">
+                        <figure class="techstack">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-js"></i>
+                            <i class="fa-brands fa-sass"></i>
+                        </figure>
+                        <i class="fa-brands fa-github"></i>
+                    </figure>
 
-                <figure class="project">
-                    <img src="" alt="">
-                </figure>
+                    <figure class="project">
+                        <img src="" alt="">
+                    </figure>
+
+                    <figure class="project">
+                        <img src="" alt="">
+                    </figure>
+                </div>
 
             </section>
 
             <!--Contact me form-->
-            <section id="contact-me">
+            <section id="contact-me" class="lite">
+                <h2>CONTACT ME!</h2>
                 <form action="">
-                    <input type="text" placeholder="Name / Company Name"
-                        required>
-                    <input type="email" name="email" id="email"
-                        placeholder="Email-Address" required>
-                    <input type="number" name="Phone&nbsp;Number"
-                        id="phone" placeholder="555-555-5555">
-                    <textarea name="message" id="message" cols="30"
-                        rows="10"
-                        value="Write your message here"></textarea>
-                    <input type="button" value="Send">
+                    <div id="inputs">
+                        <input type="text"
+                            placeholder="Name / Company Name" required>
+                        <input type="email" name="email" id="email"
+                            placeholder="Email-Address" required>
+                        <input type="number" name="Phone&nbsp;Number"
+                            id="phone" placeholder="555-555-5555">
+                    </div>
+
+                    <div id="textarea-submit">
+                        <textarea name="message" id="message" cols="30"
+                            rows=""
+                            value="Write your message here"></textarea>
+                        <input type="button" value="Send" id="submit-btn">
+                    </div>
+
                 </form>
             </section>
         </main>
 
-        <footer>
+        <footer class="lite">
             <ul>
-                <li>Git</li>
-                <li>Resume</li>
-                <li>Something</li>
+
             </ul>
         </footer>
 

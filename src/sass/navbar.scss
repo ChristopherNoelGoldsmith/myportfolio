@@ -1,0 +1,40 @@
+@use 'styles';
+
+nav {
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.75);
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    border-bottom: 2px solid seashell;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    #navbar-items {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        list-style: none;
+        padding: 1%;
+        width: 100%;
+
+        li {
+            @include styles.flexit;
+            padding: 5px;
+            color: seashell;
+
+            a {
+                color: seashell;
+                text-decoration: none;
+            }
+        }
+
+        :hover {
+            opacity: 0.8;
+            color: cyan;
+            cursor: pointer;
+        }
+    }
+}

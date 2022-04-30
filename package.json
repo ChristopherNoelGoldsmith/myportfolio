@@ -4,7 +4,8 @@
   "description": "A portfolio of the project I've worked on",
   "main": "index.js",
   "scripts": {
-    "test": "start"
+    "sass": "sass --watch src/sass:src/styles --style compressed --no-source-map"
+
   },
   "repository": {
     "type": "git",

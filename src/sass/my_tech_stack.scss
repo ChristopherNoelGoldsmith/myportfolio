@@ -1,0 +1,24 @@
+@use 'styles';
+
+section#my-tech-stack {
+    @include styles.flexit;
+    flex-direction: column;
+
+    h2 {
+        font-size: styles.$heading-font-size/1.7;
+    }
+
+    figure {
+        @include styles.flexit;
+        flex-wrap: wrap;
+        width: 35vw;
+
+        i {
+            width: 5rem;
+            height: 5rem;
+            font-size: 5rem;
+            padding: 1%;
+            margin: 2%;
+        }
+    }
+}

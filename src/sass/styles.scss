@@ -1,0 +1,36 @@
+@mixin flexit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+$box-color-lite: rgba(0, 200, 250, 0.9);
+$border-color-lite: rgba(0, 200, 250, 0.6);
+$box-color-dark: rgba(0, 0, 75, 0.9);
+$border-color-dark: rgba(255, 220, 75, 0.75);
+$font-color-lite: #333;
+$font-color-dark: seashell;
+$heading-font-size: 2.5rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.lite {
+    background: $box-color-lite;
+}
+
+.dark {
+    background: $box-color-dark;
+}
