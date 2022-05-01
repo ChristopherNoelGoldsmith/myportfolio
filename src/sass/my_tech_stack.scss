@@ -7,7 +7,7 @@ section#my-tech-stack {
     margin: auto;
 
     h2 {
-        font-size: styles.$heading-font-size/1.7;
+        font-size: styles.$heading-font-size;
     }
 
     figure {
@@ -21,6 +21,20 @@ section#my-tech-stack {
             font-size: 5rem;
             padding: 1%;
             margin: 2%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section#my-tech-stack {
+        h2 {
+            margin: 3vh 0;
+        }
+
+        figure {
+            width: 70vw;
+            flex-direction: row;
+            margin: 1%;
         }
     }
 }
