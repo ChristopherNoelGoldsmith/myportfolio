@@ -124,8 +124,18 @@
             <!--Contact me form-->
             <section id="contact-me" class="lite">
                 <h2>CONTACT ME!</h2>
-                <form name="contact" method="POST" data-netlify="true"
-                    action="">
+                <form name="contact" method="POST"
+                    action="https://formsubmit.co/ab646cfa1f0e37e7263efc432c032001">
+                    <!--Honeypot to capture web scraping-->
+                    <input type="text" name="_honey" style="display: none">
+
+                    <!--Disable Captcha-->
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <!--Auto Response-->
+                    <input type="hidden" name="_autoresponse"
+                        value="Thank you for your contacting me! I will respond as soon as possiable.">
+
                     <div id="inputs">
                         <input type="text"
                             placeholder="Name / Company Name" required>
