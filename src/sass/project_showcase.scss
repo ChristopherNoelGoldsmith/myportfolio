@@ -3,7 +3,7 @@
 section#project-showcase {
     @include styles.flexit;
     width: 85vw;
-    background: green;
+    background: styles.$box-color-lite;
     flex-direction: column;
     margin: auto;
 
@@ -16,15 +16,16 @@ section#project-showcase {
         flex-direction: row;
 
         figure.project {
-            width: 300px;
-            height: 300px;
-            background: orchid;
-            padding: 3%;
+            width: 1.78vh * 35;
+            background: styles.$border-color-dark;
+            padding: 1vh 1vw;
             margin: 3%;
+            max-width: 80vw;
 
             img {
-                height: 25vh;
-                width: 35vh;
+                width: 100%;
+                max-width: inherit;
+                max-height: 45vw;
                 margin-bottom: 5%;
             }
 

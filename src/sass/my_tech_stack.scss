@@ -3,6 +3,7 @@
 section#my-tech-stack {
     @include styles.flexit;
     flex-direction: column;
+    width: 85vw;
 
     h2 {
         font-size: styles.$heading-font-size/1.7;

@@ -3,7 +3,7 @@
 section#about-me {
     @include styles.flexit;
     flex-direction: column;
-    background: orange;
+    background: styles.$border-color-lite;
     height: 100vh;
     margin: 10vh auto 20vh auto;
 
@@ -25,14 +25,18 @@ section#about-me {
         padding: 5vh 5vw;
 
         figure {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: red;
-            padding: 10%;
+            padding: 10px;
+
+            img {
+                width: 25vw;
+                border-radius: 50%;
+                padding: 10%;
+                width: 100%;
+            }
         }
 
         div#about-me-details {
+            background: styles.$border-color-dark;
             padding: 10%;
             @include styles.flexit;
             flex-direction: column;

@@ -13,6 +13,8 @@ $font-color-lite: #333;
 $font-color-dark: seashell;
 $heading-font-size: 2.5rem;
 
+@keyframes spin-and-seperate {}
+
 * {
     margin: 0;
     padding: 0;
@@ -33,4 +35,29 @@ body {
 
 .dark {
     background: $box-color-dark;
+}
+
+//Background
+div#background {
+    z-index: -1000;
+    position: fixed;
+    background-position-x: center;
+    background-position-y: center;
+    background: url('.././img/background.jpg');
+    height: 100vh;
+    width: 100vw;
+}
+
+//Background Line layer 1
+div#background::before {
+    content: '';
+    z-index: -100;
+    position: fixed;
+    top: 45vh;
+    left: 0;
+    transform: rotate(40deg);
+    height: 100vh;
+    width: 200%;
+    background: cyan;
+    opacity: 0.8;
 }
