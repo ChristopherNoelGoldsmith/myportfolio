@@ -5,8 +5,8 @@
     text-align: center;
 }
 
-$box-color-lite: rgba(0, 200, 250, 0.9);
-$border-color-lite: rgba(0, 200, 250, 0.6);
+$box-color-lite: rgba(0, 0, 0, 0.3);
+$border-color-lite: rgba(0, 200, 250, 0.3);
 $box-color-dark: rgba(0, 0, 75, 0.9);
 $border-color-dark: rgba(255, 220, 75, 0.75);
 $font-color-lite: #333;
@@ -20,6 +20,7 @@ $heading-font-size: 2.5rem;
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $font-color-dark;
 }
 
 body {
@@ -59,5 +60,5 @@ div#background::before {
     height: 100vh;
     width: 200%;
     background: cyan;
-    opacity: 0.8;
+    opacity: 0.3;
 }

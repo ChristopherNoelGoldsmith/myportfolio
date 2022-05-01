@@ -35,7 +35,7 @@ section#contact-me {
                 width: 25vw;
             }
 
-            input#submit-btn {
+            button#submit-btn {
                 font-size: 1.5rem;
                 font-weight: 1000;
                 width: 15vw;
@@ -53,6 +53,10 @@ section#contact-me {
     section#contact-me {
         form {
             flex-direction: column;
+
+            input {
+                width: 80vw;
+            }
         }
     }
 }

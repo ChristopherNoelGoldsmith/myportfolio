@@ -3,7 +3,7 @@
 section#about-me {
     @include styles.flexit;
     flex-direction: column;
-    background: styles.$border-color-lite;
+    background: styles.$box-color-lite;
     height: 100vh;
     margin: 10vh auto 20vh auto;
 
@@ -22,7 +22,7 @@ section#about-me {
         @include styles.flexit;
         flex-direction: row;
         width: 85vw;
-        padding: 5vh 5vw;
+        padding: 5vh 1vw;
 
         figure {
             padding: 10px;
@@ -30,14 +30,15 @@ section#about-me {
             img {
                 width: 25vw;
                 border-radius: 50%;
-                padding: 10%;
+                padding: 5%;
                 width: 100%;
             }
         }
 
         div#about-me-details {
-            background: styles.$border-color-dark;
+            background: styles.$border-color-lite;
             padding: 10%;
+            border-radius: 5%;
             @include styles.flexit;
             flex-direction: column;
 
@@ -51,5 +52,9 @@ section#about-me {
 @media (max-width: 768px) {
     section#about-me {
         flex-direction: column;
+
+        div#about-me-cont {
+            flex-direction: column;
+        }
     }
 }

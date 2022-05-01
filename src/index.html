@@ -12,7 +12,8 @@
         <link rel="stylesheet" href="styles/my_tech_stack.css">
         <link rel="stylesheet" href="styles/project_showcase.css">
         <link rel="stylesheet" href="styles/contact-me.css">
-        <script src="./scripts/app.js"></script>
+        <script src="./scripts/bubbles.js" defer></script>
+        <script src="./scripts/app.js" defer></script>
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
             integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -22,7 +23,9 @@
 
     <body>
 
-        <div id="background"></div>
+        <div id="background">
+            <div id="bubbles"></div>
+        </div>
 
         <header>
 
@@ -54,7 +57,7 @@
                     <h1>Christopher Goldsmith</h1>
                     <h3>Front-End Developer</h3>
                 </header>
-                <div>
+                <div id="about-me-cont">
                     <figure for="my-image">
                         <img id="my-image" src="./img/portrait.jpg"
                             alt="An image of the developer Christopher">
@@ -62,14 +65,11 @@
 
                     <div id="about-me-details">
                         <h2>About Me</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur
-                            adipisicing
-                            elit. Consectetur amet nam, nihil distinctio
-                            eveniet earum maiores est pariatur magnam
-                            tenetur
-                            nostrum at officiis corporis facere a!
-                            Quibusdam
-                            dignissimos fugit minima.</p>
+                        <p>I am frontend developer from Las Vegas, Navada.
+                            I specialize in Javascript and have experience
+                            with React.
+
+                        </p>
                     </div>
                 </div>
 
@@ -97,9 +97,10 @@
 
                 <div id="projects">
                     <figure class="project" for="weather-stack">
-                        <img id="weather-stack"
-                            src="./img/weather_project.png"
-                            alt="image of weather forcast app">
+                        <a href="https://forcastdeck.netlify.app/"><img
+                                href="" id="weather-stack"
+                                src="./img/weather_project.png"
+                                alt="image of weather forcast app"></a>
                         <figure class="techstack">
                             <i class="fa-brands fa-html5"></i>
                             <i class="fa-brands fa-css3-alt"></i>
@@ -135,7 +136,7 @@
 
                     <div id="textarea-submit">
                         <textarea name="message" id="message" cols="30"
-                            rows=""
+                            rows="5"
                             value="Write your message here"></textarea>
                         <input type="button" value="Send" id="submit-btn">
                     </div>
