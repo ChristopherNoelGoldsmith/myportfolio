@@ -17,15 +17,21 @@ section#project-showcase {
 
         figure.project {
             width: 25vw;
-            background: styles.$border-color-dark;
+            background: transparent;
             padding: 1vh 1vw;
             margin: 3%;
+
+            a {
+                z-index: 100;
+                color: seashell;
+            }
 
             img {
                 width: 100%;
                 max-width: inherit;
                 max-height: 45vw;
                 margin-bottom: 5%;
+                border: 2px solid black;
             }
 
             figure.techstack {
@@ -37,10 +43,15 @@ section#project-showcase {
                 }
             }
 
-            i {
+            a i {
                 font-size: 3rem;
                 margin: 3% 0 0 0;
             }
+
+            a i:hover {
+                color: cyan;
+            }
+
         }
     }
 }

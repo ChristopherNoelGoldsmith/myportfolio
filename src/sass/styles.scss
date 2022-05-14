@@ -8,10 +8,13 @@
 $box-color-lite: rgba(0, 0, 0, 0.3);
 $border-color-lite: rgba(0, 200, 250, 0.3);
 $box-color-dark: rgba(0, 0, 75, 0.9);
-$border-color-dark: rgba(255, 220, 75, 0.45);
+$border-color-dark: cornflowerblue;
 $font-color-lite: #333;
 $font-color-dark: seashell;
 $heading-font-size: 2.5rem;
+
+$contact-me-desktop: 25vw;
+$contact-me-mobile: 80vw;
 
 * {
     margin: 0;
@@ -41,22 +44,32 @@ div#background {
     z-index: -1000;
     position: fixed;
     background-position-x: center;
-    background-position-y: center;
-    background: url('.././img/background.jpg');
+    background: url('.././img/oceanfloor.jpg');
     height: 100vh;
     width: 100vw;
 }
 
 //Background Line layer 1
-div#background::before {
-    content: '';
-    z-index: -100;
+div#menu {
     position: fixed;
-    top: 45vh;
     left: 0;
-    transform: rotate(40deg);
-    height: 100vh;
-    width: 200%;
+    height: 150vh;
+    width: 300%;
     background: cyan;
-    opacity: 0.3;
+    opacity: 0.1;
+    transition: all 1s;
+    z-index: -10;
+}
+
+div#menu.vis {
+    position: fixed;
+    top: -20vh;
+    left: 70%;
+    height: 100vh;
+    width: 100vw;
+    background: rgba($color: cyan, $alpha: 0.65);
+    opacity: 1;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 10;
 }

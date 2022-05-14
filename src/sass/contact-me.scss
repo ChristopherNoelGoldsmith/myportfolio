@@ -4,7 +4,7 @@ section#contact-me {
     @include styles.flexit;
     flex-direction: column;
     margin: 25vh 0;
-    height: 75vh;
+    height: 50vh;
 
     form {
         margin-top: 3vh;
@@ -18,7 +18,7 @@ section#contact-me {
             border: none;
             border-radius: 5%;
             padding: 2%;
-            width: 25vw;
+            width: styles.$contact-me-desktop;
             margin: 2vh 5px;
             margin-bottom: auto;
         }
@@ -33,10 +33,13 @@ section#contact-me {
             flex-direction: column;
             justify-content: space-between;
 
+            textarea {
+                height: 10vh;
+            }
+
             input#submit-btn {
                 font-size: 1.5rem;
                 font-weight: 1000;
-                width: 15vw;
                 color: #333;
             }
 
@@ -53,8 +56,10 @@ section#contact-me {
         form {
             flex-direction: column;
 
-            input {
-                width: 80vw;
+            input,
+            textarea,
+            input#submit-btn {
+                width: styles.$contact-me-mobile;
             }
         }
     }
