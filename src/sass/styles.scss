@@ -50,26 +50,41 @@ div#background {
 }
 
 //Background Line layer 1
-div#menu {
+#menu {
     position: fixed;
-    left: 0;
-    height: 150vh;
-    width: 300%;
-    background: cyan;
-    opacity: 0.1;
+    bottom: -100%;
+    margin: 0 auto;
+    height: 50vh;
+    width: 50vh;
     transition: all 1s;
+    border-radius: 50%;
+    background: rgba($color: whitesmoke, $alpha: 0.35);
     z-index: -10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        list-style: none;
+        width: 85%;
+
+        li {
+            text-align: left;
+            font-size: 1.1rem;
+            padding: 3px;
+        }
+    }
 }
 
-div#menu.vis {
+#menu.vis {
     position: fixed;
-    top: -20vh;
-    left: 70%;
-    height: 100vh;
-    width: 100vw;
-    background: rgba($color: cyan, $alpha: 0.65);
-    opacity: 1;
-    border-radius: 50%;
+    margin: auto;
+    left: auto;
+    bottom: 25%;
+    height: 50vh;
+    width: 50vh;
+    background: rgba($color: whitesmoke, $alpha: 0.35);
+    border: 2px solid whitesmoke;
     transition: all 1s;
     z-index: 10;
 }

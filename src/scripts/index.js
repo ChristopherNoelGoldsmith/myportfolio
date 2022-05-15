@@ -1,19 +1,17 @@
-//styles
-import '../styles/styles.css';
-import '../styles/about_me.css';
-import '../styles/my_tech_stack.css';
-import '../styles/navbar.css';
-import '../styles/project_showcase.css';
-import '../styles/contact_me.css';
+//sass
+import '../sass/styles.scss';
+import '../sass/about_me.scss';
+import '../sass/my_tech_stack.scss';
+import '../sass/navbar.scss';
+import '../sass/project_showcase.scss';
+import '../sass/contact_me.scss';
 //scripts
 import runCascadingBubbles from './bubbles';
 //images
 import '../img/oceanfloor.jpg';
-import '../img/makesomeflashcards.jpg';
-import '../img/portrait.jpg';
-import '../img/weather_project.png';
-
-console.log(StyleSheet);
+import makeSomeFlashCards from '../img/makesomeflashcards.jpg';
+import portrait from '../img/portrait.jpg';
+import weatherProject from '../img/weather_project.png';
 
 const toggleVis = (el) => {
     const elementToMakeVis = document.querySelector(el).classList;
@@ -25,4 +23,11 @@ document.getElementById('vis-btn').addEventListener('click', () => {
     toggleVis('#menu');
 })
 
+const populateImages = () => {
+    const myPortrait = document.getElementById('my-image').src = portrait;
+    const project1 = document.getElementById('project1').src = weatherProject;
+    const project2 = document.getElementById('project2').src = makeSomeFlashCards;
+}
+
 runCascadingBubbles();
+populateImages();
