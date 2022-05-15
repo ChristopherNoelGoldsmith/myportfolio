@@ -1,31 +1,6 @@
 /*For this animation to function all you need do is add a div onto the dom with the id 'bubbles */
 
-const createKeyframes = () => {
-
-    //inserts keyframes and positions the bubble div on the DOM.
-    const css = document.styleSheets[0];
-    css.insertRule(`
-    @keyframes bubble-up {
-        from {
-            transform: translateY(0%);
-        }
-    
-        to {
-            transform: translateY(-1500%);
-            opacity: 0;
-        }
-    }`, css.cssRules.length)
-    css.insertRule(`
-    #bubbles {
-        position: fixed;
-        bottom: 0px;
-        left: 0;
-        height: 120vh;
-        z-index:-1;
-    }`, css.cssRules.length)
-};
-
-(function () {
+const runCascadingBubbles = () => {
     const createKeyframes = () => {
 
         //inserts keyframes and positions the bubble div on the DOM.
@@ -89,4 +64,6 @@ const createKeyframes = () => {
     createKeyframes();
     createBaseDiv();
     cascadingBubbles();
-})()
+};
+
+export default runCascadingBubbles;
