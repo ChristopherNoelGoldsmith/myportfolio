@@ -1,8 +1,8 @@
 @mixin flexit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 $box-color-lite: rgba(0, 0, 0, 0.3);
@@ -17,74 +17,74 @@ $contact-me-desktop: 25vw;
 $contact-me-mobile: 80vw;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    color: $font-color-dark;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  color: $font-color-dark;
 }
 
 .lite {
-    background: $box-color-lite;
+  background: $box-color-lite;
 }
 
 .dark {
-    background: $box-color-dark;
+  background: $box-color-dark;
 }
 
 //Background
 div#background {
-    z-index: -1000;
-    position: fixed;
-    background-position-x: center;
-    background: url('.././img/oceanfloor.jpg');
-    height: 100vh;
-    width: 100vw;
+  z-index: -1000;
+  position: fixed;
+  background-position-x: center;
+  background: url(".././img/oceanfloor.jpg");
+  height: 100vh;
+  width: 100vw;
 }
 
 //Background Line layer 1
 #menu {
-    position: fixed;
-    bottom: -100%;
-    margin: 0 auto;
-    height: 50vh;
-    width: 50vh;
-    transition: all 1s;
-    border-radius: 50%;
-    background: rgba($color: whitesmoke, $alpha: 0.35);
-    z-index: -10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  bottom: -100%;
+  margin: 0 auto;
+  height: 50vh;
+  width: 50vh;
+  transition: all 1s;
+  border-radius: 50%;
+  background: rgba($color: whitesmoke, $alpha: 0.35);
+  z-index: -10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    ul {
-        list-style: none;
-        width: 85%;
+  ul {
+    list-style: none;
+    width: 85%;
 
-        li {
-            text-align: left;
-            font-size: 1.1rem;
-            padding: 3px;
-        }
+    li {
+      text-align: left;
+      font-size: 1.1rem;
+      padding: 3px;
     }
+  }
 }
 
 #menu.vis {
-    position: fixed;
-    margin: auto;
-    left: auto;
-    bottom: 25%;
-    height: 50vh;
-    width: 50vh;
-    background: rgba($color: whitesmoke, $alpha: 0.35);
-    border: 2px solid whitesmoke;
-    transition: all 1s;
-    z-index: 10;
+  position: fixed;
+  margin: auto;
+  left: auto;
+  bottom: 25%;
+  height: 50vh;
+  width: 50vh;
+  background: rgba($color: whitesmoke, $alpha: 0.35);
+  border: 2px solid whitesmoke;
+  transition: all 1s;
+  z-index: 10;
 }

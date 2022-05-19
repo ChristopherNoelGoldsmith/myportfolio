@@ -1,92 +1,122 @@
-@use 'styles';
+@use "styles";
 
 section#project-showcase {
+  @include styles.flexit;
+  width: 85vw;
+  background: styles.$box-color-lite;
+  flex-direction: column;
+  margin: auto;
+
+  h2 {
+    font-size: styles.$heading-font-size;
+    margin: 3vh 0;
+  }
+
+  div.projects {
     @include styles.flexit;
-    width: 85vw;
-    background: styles.$box-color-lite;
-    flex-direction: column;
-    margin: auto;
+    flex-direction: row;
 
-    h2 {
-        font-size: styles.$heading-font-size/1.7;
-    }
+    figure.project-image {
+      width: 50vw;
+      background: transparent;
+      padding: 1vh 1vw;
+      margin: 2%;
 
-    div#projects {
-        @include styles.flexit;
-        flex-direction: row;
+      a {
+        z-index: 100;
+        color: seashell;
+      }
 
-        figure.project {
-            width: 25vw;
-            background: transparent;
-            padding: 1vh 1vw;
-            margin: 3%;
+      img {
+        width: 100%;
+        max-width: inherit;
+        max-height: 45vw;
+        margin-bottom: 5%;
+        border: 2px solid black;
+      }
 
-            a {
-                z-index: 100;
-                color: seashell;
-            }
+      img:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
 
-            img {
-                width: 100%;
-                max-width: inherit;
-                max-height: 45vw;
-                margin-bottom: 5%;
-                border: 2px solid black;
-            }
+      label {
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
 
-            img:hover {
-                opacity: 0.8;
-                cursor: pointer;
-            }
+      figure.techstack {
+        border-top: 2px black dotted;
 
-            label {
-                font-size: 1.2rem;
-                font-weight: 400;
-            }
-
-            figure.techstack {
-                border-top: 2px black dotted;
-
-                i {
-                    font-size: 2rem;
-                    margin: 1%;
-                }
-            }
-
-            a i {
-                font-size: 3rem;
-                margin: 3% 0 0 0;
-            }
-
-            a i:hover {
-                color: cyan;
-            }
-
+        i {
+          font-size: 2rem;
+          margin: 1%;
         }
+      }
+
+      a i {
+        font-size: 3rem;
+        margin: 3% 0 0 0;
+      }
+
+      a i:hover {
+        transform: translateY(-1vh);
+        color: cyan;
+        transition: all 1s ease;
+      }
     }
+    div.project-purpose {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2%;
+      background: rgba($color: #000000, $alpha: 0.2);
+      border-radius: 5px;
+      margin: 2%;
+      height: 50vh;
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 2vh;
+        border-bottom: 1px dotted seashell;
+      }
+      p {
+        font-size: 1.1rem;
+        max-width: 50vw;
+        line-height: 1.5rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
-    section#project-showcase {
-        div#projects {
-            flex-direction: column;
-            width: 80vw;
+  section#project-showcase {
+    flex-direction: column;
+    div.projects {
+      flex-direction: column;
+      width: 95vw;
 
-            figure.project {
-                width: 80vw;
-
-                input {
-                    width: 80vw;
-
-                    div#text-areasubmit {
-
-                        textarea,
-                        input {
-                            width: 80vw;
-                        }
-                    }
-                }
-            }
+      figure.project-image {
+        width: 80vw;
+        flex-direction: column;
+      }
+      div.project-purpose {
+        height: auto;
+        P {
+          max-width: 75vw;
         }
+      }
     }
+  }
+  input {
+    width: 95vw;
+
+    div#text-areasubmit {
+      textarea,
+      input {
+        width: 80vw;
+      }
+    }
+  }
 }

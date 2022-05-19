@@ -1,40 +1,43 @@
-@use 'styles';
+@use "styles";
 
 section#my-tech-stack {
+  @include styles.flexit;
+  flex-direction: column;
+  width: 85vw;
+  margin: auto;
+
+  h2 {
+    font-size: styles.$heading-font-size;
+  }
+
+  figure {
     @include styles.flexit;
-    flex-direction: column;
-    width: 85vw;
-    margin: auto;
+    flex-wrap: wrap;
+    width: 35vw;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 3vh 0;
 
-    h2 {
-        font-size: styles.$heading-font-size;
+    i {
+      width: 5rem;
+      height: 5rem;
+      font-size: 5rem;
+      padding: 1%;
+      margin: 2%;
     }
-
-    figure {
-        @include styles.flexit;
-        flex-wrap: wrap;
-        width: 35vw;
-
-        i {
-            width: 5rem;
-            height: 5rem;
-            font-size: 5rem;
-            padding: 1%;
-            margin: 2%;
-        }
-    }
+  }
 }
 
 @media (max-width: 768px) {
-    section#my-tech-stack {
-        h2 {
-            margin: 3vh 0;
-        }
-
-        figure {
-            width: 70vw;
-            flex-direction: row;
-            margin: 1%;
-        }
+  section#my-tech-stack {
+    h2 {
+      margin: 3vh 0;
     }
+
+    figure {
+      width: 70vw;
+      flex-direction: row;
+      margin: 1%;
+    }
+  }
 }

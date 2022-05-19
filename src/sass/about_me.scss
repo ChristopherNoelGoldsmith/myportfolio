@@ -1,59 +1,63 @@
-@use 'styles';
+@use "styles";
 
 section#about-me {
+  @include styles.flexit;
+  flex-direction: column;
+  background: styles.$box-color-lite;
+  margin: 10vh auto 20vh auto;
+
+  header {
+    padding: 3%;
+    h1 {
+      font-size: styles.$heading-font-size;
+      border-bottom: black 2px dotted;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+
+  div {
     @include styles.flexit;
-    flex-direction: column;
-    background: styles.$box-color-lite;
-    height: 100vh;
-    margin: 10vh auto 20vh auto;
+    flex-direction: row;
+    width: 85vw;
+    padding: 5vh 1vw;
 
-    header {
-        h1 {
-            font-size: styles.$heading-font-size;
-            border-bottom: black 2px dotted;
-        }
+    figure {
+      padding: 10px;
 
-        h3 {
-            font-size: 1.4rem;
-        }
+      img {
+        border-radius: 50%;
+        padding: 5%;
+        width: 100%;
+      }
     }
 
-    div {
-        @include styles.flexit;
-        flex-direction: row;
-        width: 85vw;
-        padding: 5vh 1vw;
+    div#about-me-details {
+      background: styles.$border-color-lite;
+      padding: 2%;
+      border-radius: 5px;
+      @include styles.flexit;
+      flex-direction: column;
 
-        figure {
-            padding: 10px;
-
-            img {
-                border-radius: 50%;
-                padding: 5%;
-                width: 100%;
-            }
-        }
-
-        div#about-me-details {
-            background: styles.$border-color-lite;
-            padding: 10%;
-            border-radius: 5%;
-            @include styles.flexit;
-            flex-direction: column;
-
-            h2 {
-                margin-bottom: 2vh;
-            }
-        }
+      h2 {
+        margin-bottom: 2vh;
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
     }
+  }
 }
 
 @media (max-width: 768px) {
-    section#about-me {
-        flex-direction: column;
+  section#about-me {
+    flex-direction: column;
 
-        div#about-me-cont {
-            flex-direction: column;
-        }
+    div#about-me-cont {
+      flex-direction: column;
     }
+  }
 }
