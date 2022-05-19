@@ -7,7 +7,8 @@ module.exports = {
     output: {
         //filename: 'main.js',
         filename: '[name][contenthash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        clean: true
     },
     devServer: {
         static: {
@@ -19,6 +20,7 @@ module.exports = {
         compress: true,
         historyApiFallback: true
     },
+    devtool: 'source-map',
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Christopher Noel Goldsmith',
@@ -36,6 +38,16 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
             },
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env',]
+                    }
+                }
+            }
         ],
 
     },

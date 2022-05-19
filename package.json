@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChristopherNoelGoldsmith/myportfolio.git"
+    "url": "git+https://github.com/ChristopherNoelGoldsmith/weather_app.git"
   },
   "keywords": [
     "christopher",
@@ -30,9 +30,13 @@
   },
   "homepage": "https://github.com/ChristopherNoelGoldsmith/myportfolio#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.12",
+    "@babel/preset-env": "^7.17.12",
+    "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "path": "^0.12.7",
+    "regenerator-runtime": "^0.13.9",
     "sass": "^1.51.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",

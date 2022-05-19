@@ -23,6 +23,10 @@ document.getElementById('vis-btn').addEventListener('click', () => {
     toggleVis('#menu');
 })
 
+document.getElementById("contact-me-form").addEventListener('submit', (event) => {
+    console.log(document.forms.contact.every());
+})
+
 const populateImages = () => {
     const myPortrait = document.getElementById('my-image').src = portrait;
     const project1 = document.getElementById('project1').src = weatherProject;

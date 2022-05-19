@@ -153,10 +153,6 @@
                         </a>
 
                     </figure>
-
-                    <figure class="project">
-                        <img src="" alt="">
-                    </figure>
                 </div>
 
             </section>
@@ -164,7 +160,8 @@
             <!--Contact me form-->
             <section id="contact-me" class="lite">
                 <h2>CONTACT ME!</h2>
-                <form name="contact" method="POST"
+                <form target="dummyframe" id="contact-me-form"
+                    name="contact" method="POST"
                     action="https://formsubmit.co/ab646cfa1f0e37e7263efc432c032001">
                     <!--Honeypot to capture web scraping-->
                     <input type="text" name="_honey" style="display: none">
@@ -175,6 +172,10 @@
                     <!--Auto Response-->
                     <input type="hidden" name="_autoresponse"
                         value="Thank you for your contacting me! I will respond as soon as possiable.">
+
+                    <!--No Redirect-->
+                    <iframe name="dummyframe" id="dummyframe"
+                        style="display: none;"></iframe>
 
                     <div id="inputs">
                         <input type="text"
