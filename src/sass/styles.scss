@@ -39,6 +39,19 @@ body {
   background: $box-color-dark;
 }
 
+.btn {
+  border-radius: 5px;
+  height: 2rem;
+  width: 6rem;
+  padding: 2px;
+  font-weight: 500;
+  background: #333;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
 //Background
 div#background {
   z-index: -1000;

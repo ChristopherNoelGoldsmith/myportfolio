@@ -6,10 +6,12 @@
     box-shadow: transparent;
     transform: scale(1);
   }
+
   50% {
     color: cyan;
     transform: scale(1.05);
   }
+
   100% {
     color: seashell;
     box-shadow: transparent;
@@ -32,7 +34,6 @@ nav {
     flex-direction: row;
     align-items: flex-end;
     list-style: none;
-    padding: 1%;
     width: 100%;
 
     li {
@@ -44,6 +45,10 @@ nav {
         animation: pulse 3s infinite;
         color: seashell;
         text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
       }
     }
 

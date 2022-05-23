@@ -65,6 +65,7 @@ section#project-showcase {
         transition: all 1s ease;
       }
     }
+
     div.project-purpose {
       display: flex;
       flex-direction: column;
@@ -76,13 +77,15 @@ section#project-showcase {
       border-radius: 5px;
       margin: 2%;
       height: 50vh;
+
       h3 {
         font-size: 1.5rem;
         margin-bottom: 2vh;
         border-bottom: 1px dotted seashell;
       }
+
       p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         max-width: 50vw;
         line-height: 1.5rem;
       }
@@ -93,6 +96,7 @@ section#project-showcase {
 @media (max-width: 768px) {
   section#project-showcase {
     flex-direction: column;
+
     div.projects {
       flex-direction: column;
       width: 95vw;
@@ -101,18 +105,22 @@ section#project-showcase {
         width: 80vw;
         flex-direction: column;
       }
+
       div.project-purpose {
         height: auto;
+
         P {
           max-width: 75vw;
         }
       }
     }
   }
+
   input {
     width: 95vw;
 
     div#text-areasubmit {
+
       textarea,
       input {
         width: 80vw;
