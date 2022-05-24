@@ -24,7 +24,7 @@ section#project-showcase {
 
       a {
         z-index: 100;
-        color: seashell;
+        color: styles.$font-color;
       }
 
       img {
@@ -81,7 +81,7 @@ section#project-showcase {
       h3 {
         font-size: 1.5rem;
         margin-bottom: 2vh;
-        border-bottom: 1px dotted seashell;
+        border-bottom: 1px dotted styles.$font-color;
       }
 
       p {

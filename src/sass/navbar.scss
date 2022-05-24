@@ -1,24 +1,5 @@
 @use "styles";
 
-@keyframes pulse {
-  0% {
-    color: seashell;
-    box-shadow: transparent;
-    transform: scale(1);
-  }
-
-  50% {
-    color: cyan;
-    transform: scale(1.05);
-  }
-
-  100% {
-    color: seashell;
-    box-shadow: transparent;
-    transform: scale(1);
-  }
-}
-
 nav {
   width: 100vw;
   height: 7vh;
@@ -28,6 +9,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
 
   #navbar-items {
     display: flex;
@@ -39,23 +21,25 @@ nav {
     li {
       @include styles.flexit;
       padding: 5px;
-      color: seashell;
+      color: styles.$font-color;
 
       a {
-        animation: pulse 3s infinite;
-        color: seashell;
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include styles.flexit;
         text-align: center;
+        color: styles.$font-color;
+        text-decoration: none;
       }
     }
+  }
+}
 
-    :hover {
-      opacity: 0.8;
-      color: cyan;
-      cursor: pointer;
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+    left: 0;
+
+    #navbar-items {
+      flex-direction: column;
     }
   }
 }

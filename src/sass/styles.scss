@@ -8,9 +8,8 @@
 $box-color-lite: rgba(0, 0, 0, 0.3);
 $border-color-lite: rgba(0, 200, 250, 0.3);
 $box-color-dark: rgba(0, 0, 75, 0.9);
-$border-color-dark: cornflowerblue;
 $font-color-lite: #333;
-$font-color-dark: seashell;
+$font-color: seashell;
 $heading-font-size: 2.5rem;
 
 $contact-me-desktop: 25vw;
@@ -28,7 +27,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  color: $font-color-dark;
+  color: $font-color;
 }
 
 .lite {
@@ -40,16 +39,29 @@ body {
 }
 
 .btn {
+  @include flexit;
+  color: #333;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 5px;
-  height: 2rem;
-  width: 6rem;
+  height: 2.5rem;
+  width: 7rem;
   padding: 2px;
   font-weight: 500;
-  background: #333;
+  font-size: 1.2rem;
+  background: $font-color;
+  border: none;
+
+  i {
+    font-size: 1.5rem;
+    margin: 2px;
+  }
 }
 
 .btn:hover {
-  opacity: 0.9;
+  color: #333;
+  background: cyan;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 //Background
@@ -64,6 +76,7 @@ div#background {
 
 //Background Line layer 1
 #menu {
+  @include flexit;
   position: fixed;
   bottom: -100%;
   margin: 0 auto;
@@ -71,11 +84,8 @@ div#background {
   width: 50vh;
   transition: all 1s;
   border-radius: 50%;
-  background: rgba($color: whitesmoke, $alpha: 0.35);
+  background: rgba($color: $font-color, $alpha: 0.35);
   z-index: -10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   ul {
     list-style: none;
@@ -96,8 +106,8 @@ div#background {
   bottom: 25%;
   height: 50vh;
   width: 50vh;
-  background: rgba($color: whitesmoke, $alpha: 0.35);
-  border: 2px solid whitesmoke;
+  background: rgba($color: $font-color, $alpha: 0.35);
+  border: 2px solid $font-color;
   transition: all 1s;
   z-index: 10;
 }

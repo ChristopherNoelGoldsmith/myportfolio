@@ -25,19 +25,25 @@
         <ul id="navbar-items">
           <li>
             <a id="github" target="_blank"
-              href="https://github.com/ChristopherNoelGoldsmith"><i
-                class="fa-brands fa-github fa-2x"></i></a>
+              href="https://github.com/ChristopherNoelGoldsmith"><label
+                class="btn" for="resume"><i
+                  class="fa-brands fa-github fa"></i> Github</label>
+            </a>
           </li>
           <li>
-            <a id="linkedin" target="_blank" href=""><i
-                class="fa-brands fa-linkedin fa-2x"></i></a>
+            <a id="linkedin" target="_blank" href="">
+              <label class="btn" for="resume"><i
+                  class="fa-brands fa-linkedin fa"></i> Linkedin</label>
+            </a>
           </li>
           <li>
             <a id="resume" target="_blank" href="">
-              <label class="btn" for="resume">Resume</label>
+              <label class="btn" for="resume"><i
+                  class="fa-solid fa-scroll"></i> Resume</label>
             </a>
           </li>
-          <li><a id="contact-nav"><label class="btn" for="">Contact
+          <li><a id="contact-nav"><label class="btn" for=""><i
+                  class="fa-solid fa-envelope"></i>Contact
               </label></a></li>
 
         </ul>
@@ -217,7 +223,8 @@
           <div id="textarea-submit">
             <textarea name="message" id="message"
               value="Write your message here"></textarea>
-            <input type="submit" value="Send" id="submit-btn" />
+            <input type="submit" class="btn" value="Send"
+              id="submit-btn" />
           </div>
         </form>
       </section>

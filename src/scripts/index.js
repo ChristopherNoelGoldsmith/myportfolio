@@ -18,6 +18,7 @@ import weatherProject from "../img/weather_project.jpg";
   const smoothScroll = (tar, dur) => {
     const target = document.querySelector(tar);
     const targetPosition = target.getBoundingClientRect().top;
+    console.log(targetPosition);
     window.scrollTo({
       top: targetPosition,
       behavior: 'smooth'

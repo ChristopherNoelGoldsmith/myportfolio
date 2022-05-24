@@ -16,19 +16,19 @@ section#contact-me {
         textarea {
             color: #333;
             border: none;
-            border-radius: 5%;
+            border-radius: 5px;
             padding: 2%;
             width: styles.$contact-me-desktop;
             margin: 2vh 5px;
             margin-bottom: auto;
         }
 
-        div#inputs {
+        #inputs {
             @include styles.flexit;
             flex-direction: column;
         }
 
-        div#textarea-submit {
+        #textarea-submit {
             @include styles.flexit;
             flex-direction: column;
             justify-content: space-between;
@@ -39,13 +39,7 @@ section#contact-me {
 
             input#submit-btn {
                 font-size: 1.5rem;
-                font-weight: 1000;
-                color: #333;
-            }
-
-            #submit-btn:hover {
-                opacity: 0.7;
-                transform: scale(1.05);
+                padding: 0;
             }
         }
     }
