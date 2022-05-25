@@ -15,7 +15,6 @@ import portrait from "../img/portrait.jpg";
 import weatherProject from "../img/weather_project.jpg";
 
 (() => {
-
   const populateImages = () => {
     const myPortrait = (document.getElementById("my-image").src = portrait);
     const project1 = (document.getElementById("project1-img").src =
@@ -24,15 +23,31 @@ import weatherProject from "../img/weather_project.jpg";
       makeSomeFlashCards);
   };
 
-  const toggleVis = (el) => {
-    const elementToMakeVis = document.querySelector(el).classList;
-    if (!elementToMakeVis.contains("vis")) return elementToMakeVis.add("vis");
-    return elementToMakeVis.remove("vis");
+  const toggleVis = (elements) => {
+    const toggleVisClass = (el) => {
+      if (!el.contains("vis")) return el.add("vis");
+      return el.remove("vis");
+    };
+
+    if (elements.type === "all") {
+      const elementToMakeVis = document.querySelectorAll(elements.target);
+      elementToMakeVis.forEach((el) => {
+        toggleVisClass(el.classList);
+      });
+    }
+    if (elements.type === "single") {
+      const elementToMakeVis = document.querySelector(
+        elements.target
+      ).classList;
+      toggleVisClass(elementToMakeVis);
+    }
   };
 
-  document.querySelector(".module").addEventListener("click", () => {
-    return toggleVis(".module");
-  });
+  const hamburger = document
+    .querySelector("#hamburger")
+    .addEventListener("click", () => {
+      return toggleVis({ type: "all", target: ".nav-btn" });
+    });
 
   document
     .getElementById("contact-me-form")

@@ -18,6 +18,10 @@ nav {
     list-style: none;
     width: 100%;
 
+    #hamburger {
+      display: none;
+    }
+
     li {
       @include styles.flexit;
       padding: 5px;
@@ -40,6 +44,22 @@ nav {
 
     #navbar-items {
       flex-direction: column;
+      li {
+        opacity: 0;
+        transform: scale(0);
+        transition: all 0.4s ease;
+      }
+      #hamburger {
+        display: block;
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.4s ease;
+      }
+      li.vis {
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.4s ease;
+      }
     }
   }
 }

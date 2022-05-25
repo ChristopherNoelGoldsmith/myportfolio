@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./main.js" defer></script>
-    <link rel="stylesheet"
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>
-      <%=htmlWebpackPlugin.options.title%>
-    </title>
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title><%=htmlWebpackPlugin.options.title%></title>
   </head>
 
   <body>
@@ -23,31 +22,48 @@
       <!--Navbar-->
       <nav id="nav">
         <ul id="navbar-items">
-          <li>
-            <a id="github" target="_blank"
-              href="https://github.com/ChristopherNoelGoldsmith"><label
-                class="btn" for="resume"><i
-                  class="fa-brands fa-github fa"></i> Github</label>
+          <li id="hamburger">
+            <i class="fa-solid fa-bars fa-2x"></i>
+          </li>
+          <li class="nav-btn">
+            <a
+              id="github"
+              target="_blank"
+              href="https://github.com/ChristopherNoelGoldsmith"
+              ><label class="btn" for="resume"
+                ><i class="fa-brands fa-github fa"></i> Github</label
+              >
             </a>
           </li>
-          <li>
-            <a id="linkedin" target="_blank"
-              href="https://www.linkedin.com/in/christopher-goldsmith-723868132/">
-              <label class="btn" for="linkedin"><i
-                  class="fa-brands fa-linkedin fa"></i> Linkedin</label>
+          <li class="nav-btn">
+            <a
+              id="linkedin"
+              target="_blank"
+              href="https://www.linkedin.com/in/christopher-goldsmith-723868132/"
+            >
+              <label class="btn" for="linkedin"
+                ><i class="fa-brands fa-linkedin fa"></i> Linkedin</label
+              >
             </a>
           </li>
-          <li>
-            <a id="resume" target="_blank"
-              href="https://628df61c1a95cd5f2eb186ef--dynamic-beijinho-25f5c1.netlify.app/">
-              <label class="btn" for="resume"><i
-                  class="fa-solid fa-scroll"></i> Resume</label>
+          <li class="nav-btn">
+            <a
+              id="resume"
+              target="_blank"
+              href="https://dynamic-beijinho-25f5c1.netlify.app/"
+            >
+              <label class="btn" for="resume"
+                ><i class="fa-solid fa-scroll"></i> Resume</label
+              >
             </a>
           </li>
-          <li><a id="contact-nav" href="#contact-me"><label class="btn"
-                for=""><i class="fa-solid fa-envelope"></i>Contact
-              </label></a></li>
-
+          <li class="nav-btn">
+            <a id="contact-nav" href="#contact-me"
+              ><label class="btn" for=""
+                ><i class="fa-solid fa-envelope"></i>Contact
+              </label></a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -62,19 +78,19 @@
         </header>
         <div id="about-me-cont">
           <figure for="my-image">
-            <img id="my-image" src="./2a3227b20a637dd4b39c.jpg"
-              alt="An image of the developer Christopher" />
+            <img
+              id="my-image"
+              src="./2a3227b20a637dd4b39c.jpg"
+              alt="An image of the developer Christopher"
+            />
           </figure>
 
           <div id="about-me-details">
             <h2>About Me</h2>
             <p>
-              I am frontend developer from Las Vegas, Nevada. I specialize
-              in
-              Javascript and have experience with React. I am passionate
-              about
-              optimizing the apps I make. I'm was an MMORPG/CCG junkie back
-              in
+              I am frontend developer from Las Vegas, Nevada. I specialize in
+              Javascript and have experience with React. I am passionate about
+              optimizing the apps I make. I'm was an MMORPG/CCG junkie back in
               the day so min/maxing, tinkering, optimization, and finding
               M.E.T.A is in my blood.
             </p>
@@ -102,10 +118,14 @@
 
         <div class="projects">
           <figure class="project-image" for="weather-stack">
-            <a href="https://forcastdeck.netlify.app/" target="_blank"><img
-                id="project1-img" href="" id="weather-stack"
+            <a href="https://forcastdeck.netlify.app/" target="_blank"
+              ><img
+                id="project1-img"
+                href=""
+                id="weather-stack"
                 src="./f1db9f6c6fe20ddf0a37.jpg"
-                alt="image of weather forcast app" /></a>
+                alt="image of weather forcast app"
+            /></a>
 
             <label for="project2-img">Stack and Sourcecode</label>
 
@@ -116,36 +136,54 @@
               <i class="fa-brands fa-sass"></i>
             </figure>
 
-            <a href="https://github.com/ChristopherNoelGoldsmith/weather_app"
-              target="_blank">
+            <a
+              href="https://github.com/ChristopherNoelGoldsmith/weather_app"
+              target="_blank"
+            >
               <i class="fa-brands fa-github"></i>
             </a>
           </figure>
 
           <!--Project PUrpose Description-->
           <div class="project-purpose">
-            <h3>Forcast Deck</h3>
-            <p>
-              The purpose of this project is to make an app that handles
-              multiple APIs and changing state dealing with dynamic data.
-              <br />
-              <br />
-              With this project I learned how to manage multiple streams of
-              data, state changes with that data, and how to minimize API
-              calls
-              (I have plans to optimize them even more using localStorage
-              and
-              the Date API), to make most efficent use of data.
-            </p>
+            <h3>Forecast Deck</h3>
+            <ul>
+              <li>
+                <p>
+                  <span>Purpose:</span> To save specific locations to your deck,
+                  to pull and display the current and future forecast for that
+                  location on demand.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Use:</span> A favorite button in a weather app would be
+                  convenient for any traveler, such as truckers. Having saved
+                  locations keeps memory of routes they would pass through
+                  giving advanced warning of harsh conditions.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>How?:</span> I access the weather through latitude and
+                  longitude via the weatherio API, and use a reverseGeocode API
+                  to generate the latitude and longitude. For saving favorites,
+                  I utilize the localStorage API to keep it lean, fast and the
+                  singlepage user experience seamless.
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div class="projects">
           <figure class="project-image" for="make-some-flashcards">
-            <a href="https://makesomeflashcards.netlify.app/"
-              target="_blank">
-              <img id="project2-img" src="./464e1d23ad0f6bfcc2bb.jpg"
-                alt="image of an app for creating flashcards." />
+            <a href="https://makesomeflashcards.netlify.app/" target="_blank">
+              <img
+                id="project2-img"
+                src="./464e1d23ad0f6bfcc2bb.jpg"
+                alt="image of an app for creating flashcards."
+              />
             </a>
             <label for="project2-img">Stack and Sourcecode</label>
 
@@ -156,39 +194,42 @@
               <i class="fa-brands fa-css3-alt"></i>
               <i class="fa-brands fa-js"></i>
             </figure>
-            <a href="https://github.com/ChristopherNoelGoldsmith/Flashcard-Maker"
-              target="_blank">
+            <a
+              href="https://github.com/ChristopherNoelGoldsmith/Flashcard-Maker"
+              target="_blank"
+            >
               <i class="fa-brands fa-github"></i>
             </a>
           </figure>
           <!--Project PUrpose Description-->
           <div class="project-purpose">
-            <h3>Make Some Flash Cards</h3>
-            <p>
-              The purpose of this project, is to create a study tool for my
-              wife
-              (she is in school for optometry.) I chose the React and
-              Bootstrap
-              libraries for it's architecture, with the intent of polishing
-              and
-              learning these common libraries. Throughout development of
-              this
-              project I gained a better understanding of hooks and the
-              paradigms
-              CSS has with React.
-              <br />
-              <br />
-              I decided to use localStorage() API to store the data because
-              of
-              the small scale of its use, and keeping the intent of the
-              project
-              in mind. I intend on intigrating MongoDB as a database for
-              this
-              project in the future and converting it into a fullstack MERN
-              project in the future. For the time being I have different
-              fish to
-              fry.
-            </p>
+            <h3>Flash It!</h3>
+            <ul>
+              <li>
+                <p>
+                  <span>Purpose:</span> To be a swift and effective single page
+                  study app.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Use:</span> Flash it! Is meant to be quick and
+                  effective, single-page application for the needs of basic
+                  memorization. You can save any number of question answer pairs
+                  into a deck of flashcards, and access them as you see fit via
+                  the navbar.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>How?:</span> React was chosen as the foundation for this
+                  project since it is best suited to single-page applications.
+                  Firebase is used as a database for the user, and localStorage
+                  is used to accelerate the user experience and reduce load
+                  times.
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -196,9 +237,13 @@
       <!--Contact me form-->
       <section id="contact-me" class="lite">
         <h2>CONTACT ME!</h2>
-        <form target="dummyframe" id="contact-me-form" name="contact"
+        <form
+          target="dummyframe"
+          id="contact-me-form"
+          name="contact"
           method="POST"
-          action="https://formsubmit.co/ab646cfa1f0e37e7263efc432c032001">
+          action="https://formsubmit.co/ab646cfa1f0e37e7263efc432c032001"
+        >
           <!--Honeypot to capture web scraping-->
           <input type="text" name="_honey" style="display: none" />
 
@@ -206,27 +251,43 @@
           <input type="hidden" name="_captcha" value="false" />
 
           <!--Auto Response-->
-          <input type="hidden" name="_autoresponse"
-            value="Thank you for your contacting me! I will respond as soon as possiable." />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Thank you for your contacting me! I will respond as soon as possiable."
+          />
 
           <!--No Redirect-->
-          <iframe name="dummyframe" id="dummyframe"
-            style="display: none"></iframe>
+          <iframe
+            name="dummyframe"
+            id="dummyframe"
+            style="display: none"
+          ></iframe>
 
           <div id="inputs">
-            <input type="text" placeholder="Name / Company Name"
-              required />
-            <input type="email" name="email" id="email"
-              placeholder="Email-Address" required />
-            <input type="number" name="Phone&nbsp;Number" id="phone"
-              placeholder="555-555-5555" />
+            <input type="text" placeholder="Name / Company Name" required />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email-Address"
+              required
+            />
+            <input
+              type="number"
+              name="Phone&nbsp;Number"
+              id="phone"
+              placeholder="555-555-5555"
+            />
           </div>
 
           <div id="textarea-submit">
-            <textarea name="message" id="message"
-              value="Write your message here"></textarea>
-            <input type="submit" class="btn" value="Send"
-              id="submit-btn" />
+            <textarea
+              name="message"
+              id="message"
+              value="Write your message here"
+            ></textarea>
+            <input type="submit" class="btn" value="Send" id="submit-btn" />
           </div>
         </form>
       </section>
@@ -236,18 +297,14 @@
       <!--The popup menu-->
 
       <template>
-        <main id="resume-container">
-
-        </main>
+        <main id="resume-container"></main>
       </template>
 
       <section class="module">
         <div class="modules">
-          <p>THANK YOU! I WILL RESPOND TO YOUR MESSAGE AS SOON AS
-            POSSIABLE!</p>
+          <p>THANK YOU! I WILL RESPOND TO YOUR MESSAGE AS SOON AS POSSIABLE!</p>
         </div>
       </section>
     </footer>
   </body>
-
 </html>

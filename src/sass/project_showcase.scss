@@ -84,10 +84,19 @@ section#project-showcase {
         border-bottom: 1px dotted styles.$font-color;
       }
 
-      p {
-        font-size: 1rem;
-        max-width: 50vw;
-        line-height: 1.5rem;
+      ul li {
+        list-style: none;
+        margin: 1vh 0;
+        padding: 1rem;
+        p {
+          span {
+            font-weight: 800;
+          }
+          text-align: left;
+          font-size: 1rem;
+          max-width: 50vw;
+          line-height: 1.5rem;
+        }
       }
     }
   }
@@ -109,8 +118,11 @@ section#project-showcase {
       div.project-purpose {
         height: auto;
 
-        P {
-          max-width: 75vw;
+        ul li {
+          padding: 1rem 0;
+          P {
+            max-width: 75vw;
+          }
         }
       }
     }
@@ -120,7 +132,6 @@ section#project-showcase {
     width: 95vw;
 
     div#text-areasubmit {
-
       textarea,
       input {
         width: 80vw;
