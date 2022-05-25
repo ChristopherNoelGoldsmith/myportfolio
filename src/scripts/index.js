@@ -15,15 +15,6 @@ import portrait from "../img/portrait.jpg";
 import weatherProject from "../img/weather_project.jpg";
 
 (() => {
-  const smoothScroll = (tar, dur) => {
-    const target = document.querySelector(tar);
-    const targetPosition = target.getBoundingClientRect().top;
-    console.log(targetPosition);
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
-    });
-  };
 
   const populateImages = () => {
     const myPortrait = (document.getElementById("my-image").src = portrait);
@@ -41,10 +32,6 @@ import weatherProject from "../img/weather_project.jpg";
 
   document.querySelector(".module").addEventListener("click", () => {
     return toggleVis(".module");
-  });
-
-  document.querySelector("#contact-nav").addEventListener("click", () => {
-    return smoothScroll("#contact-me", 1000);
   });
 
   document

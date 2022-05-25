@@ -22,6 +22,10 @@ $contact-me-mobile: 80vw;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
