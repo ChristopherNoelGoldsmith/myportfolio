@@ -60,6 +60,12 @@ section#about-me {
 
     div#about-me-cont {
       flex-direction: column;
+
+      figure img {
+        border-radius: 50%;
+        width: 90vw;
+        padding: 10px;
+      }
     }
   }
 }
