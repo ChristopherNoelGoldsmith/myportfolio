@@ -4,7 +4,7 @@ section#my-tech-stack {
   @include styles.flexit;
   flex-direction: column;
   width: 85vw;
-  margin: auto;
+  margin: 10vh auto;
 
   h2 {
     font-size: styles.$heading-font-size;
@@ -14,7 +14,6 @@ section#my-tech-stack {
     @include styles.flexit;
     flex-wrap: wrap;
     width: 35vw;
-    background: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     margin: 3vh 0;
 

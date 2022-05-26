@@ -22,6 +22,13 @@ import weatherProject from "../img/weather_project.jpg";
     const project2 = (document.getElementById("project2-img").src =
       makeSomeFlashCards);
   };
+  // TOggle functions
+
+  const switchClass = (element, remove, add) => {
+    element.classList.add(add);
+    element.classList.remove(remove);
+    return;
+  };
 
   const toggleVis = (elements) => {
     const toggleVisClass = (el) => {
@@ -43,13 +50,31 @@ import weatherProject from "../img/weather_project.jpg";
     }
   };
 
+  const toggleTheme = (theme) => {
+    const elementToMakeVis = document.querySelectorAll(theme.target);
+
+    elementToMakeVis.forEach((el) => {
+      console.log(el);
+      if (theme.target === ".lite") return switchClass(el, "lite", "dark");
+      return switchClass(el, "dark", "lite");
+    });
+  };
+  //
   const hamburger = document
     .querySelector("#hamburger")
     .addEventListener("click", () => {
       return toggleVis({ type: "all", target: ".nav-btn" });
     });
 
-  document
+  const theme = document
+    .querySelector("#theme-nav")
+    .addEventListener("click", () => {
+      const ifLite = document.querySelector(".lite");
+      if (ifLite !== null) return toggleTheme({ target: ".lite" });
+      return toggleTheme({ target: ".dark" });
+    });
+
+  const moduleContactMe = document
     .getElementById("contact-me-form")
     .addEventListener("submit", (event) => {
       const module = ".module";

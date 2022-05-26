@@ -3,7 +3,6 @@
 section#project-showcase {
   @include styles.flexit;
   width: 85vw;
-  background: styles.$box-color-lite;
   flex-direction: column;
   margin: auto;
 
@@ -38,6 +37,8 @@ section#project-showcase {
       img:hover {
         opacity: 0.8;
         cursor: pointer;
+        transform: scale(1.03);
+        transition: all 1s ease;
       }
 
       label {
@@ -73,7 +74,6 @@ section#project-showcase {
       align-items: center;
       text-align: center;
       padding: 2%;
-      background: rgba($color: #000000, $alpha: 0.2);
       border-radius: 5px;
       margin: 2%;
       height: 50vh;

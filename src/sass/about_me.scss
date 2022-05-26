@@ -3,7 +3,6 @@
 section#about-me {
   @include styles.flexit;
   flex-direction: column;
-  background: styles.$box-color-lite;
   margin: 10vh auto 20vh auto;
 
   header {
@@ -36,7 +35,6 @@ section#about-me {
     }
 
     div#about-me-details {
-      background: styles.$border-color-lite;
       padding: 2%;
       border-radius: 5px;
       @include styles.flexit;

@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <div id="background"></div>
+    <div id="background" class="lite"></div>
 
     <header>
       <!--Navbar-->
@@ -30,7 +30,7 @@
               id="github"
               target="_blank"
               href="https://github.com/ChristopherNoelGoldsmith"
-              ><label class="btn" for="resume"
+              ><label class="btn lite" for="resume"
                 ><i class="fa-brands fa-github fa"></i> Github</label
               >
             </a>
@@ -41,7 +41,7 @@
               target="_blank"
               href="https://www.linkedin.com/in/christopher-goldsmith-723868132/"
             >
-              <label class="btn" for="linkedin"
+              <label class="btn lite" for="linkedin"
                 ><i class="fa-brands fa-linkedin fa"></i> Linkedin</label
               >
             </a>
@@ -52,17 +52,24 @@
               target="_blank"
               href="https://dynamic-beijinho-25f5c1.netlify.app/"
             >
-              <label class="btn" for="resume"
+              <label class="btn lite" for="resume"
                 ><i class="fa-solid fa-scroll"></i> Resume</label
               >
             </a>
           </li>
           <li class="nav-btn">
             <a id="contact-nav" href="#contact-me"
-              ><label class="btn" for=""
+              ><label class="btn lite" for=""
                 ><i class="fa-solid fa-envelope"></i>Contact
               </label></a
             >
+          </li>
+          <li class="nav-btn">
+            <a id="theme-nav"
+              ><label class="btn lite" for=""
+                ><i class="fa-solid fa-sun"></i>
+                <i class="fa-solid fa-moon"></i></label
+            ></a>
           </li>
         </ul>
       </nav>
@@ -85,7 +92,7 @@
             />
           </figure>
 
-          <div id="about-me-details">
+          <div class="text-box" id="about-me-details">
             <h2>About Me</h2>
             <p>
               I am frontend developer from Las Vegas, Nevada. I specialize in
@@ -97,10 +104,11 @@
           </div>
         </div>
       </section>
+
       <!--The section showing the tech skills I have-->
       <section id="my-tech-stack" class="lite">
-        <h2>Tools I Use</h2>
-        <figure for="tech-stack-icons">
+        <h2 class="">Tools I Use</h2>
+        <figure class="techstack textbox" for="tech-stack-icons">
           <i class="fa-brands fa-html5"></i>
           <i class="fa-brands fa-css3-alt"></i>
           <i class="fa-brands fa-js"></i>
@@ -145,7 +153,7 @@
           </figure>
 
           <!--Project PUrpose Description-->
-          <div class="project-purpose">
+          <div class="project-purpose text-box">
             <h3>Forecast Deck</h3>
             <ul>
               <li>
@@ -202,7 +210,7 @@
             </a>
           </figure>
           <!--Project PUrpose Description-->
-          <div class="project-purpose">
+          <div class="project-purpose text-box">
             <h3>Flash It!</h3>
             <ul>
               <li>

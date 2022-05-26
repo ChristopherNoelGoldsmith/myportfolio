@@ -5,13 +5,45 @@
   text-align: center;
 }
 
+@mixin lite-theme {
+  background: rgba(0, 0, 0, 0.3);
+  .text-box {
+    background: rgba(0, 0, 0, 0.35);
+  }
+  color: seashell;
+  .fa-sun {
+    display: block;
+    color: goldenrod;
+  }
+  .fa-moon {
+    display: none;
+  }
+}
+
+@mixin dark-theme {
+  background: rgba(0, 0, 0, 0.75);
+  .text-box {
+    background: rgba(35, 42, 78, 0.35);
+  }
+  color: goldenrod;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  .fa-sun {
+    display: none;
+  }
+  .fa-moon {
+    display: block;
+    color: cyan;
+  }
+}
+
 $box-color-lite: rgba(0, 0, 0, 0.3);
 $border-color-lite: rgba(0, 200, 250, 0.3);
 $box-color-dark: rgba(0, 0, 75, 0.9);
 $font-color-lite: #333;
 $font-color: seashell;
-$heading-font-size: 2.5rem;
 
+$heading-font-size: 2.5rem;
 $contact-me-desktop: 25vw;
 $contact-me-mobile: 80vw;
 
@@ -20,6 +52,7 @@ $contact-me-mobile: 80vw;
   padding: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 5px;
 }
 
 html {
@@ -36,17 +69,19 @@ body {
 }
 
 .lite {
-  background: $box-color-lite;
+  @include lite-theme();
+  transition: all 1s ease;
 }
 
 .dark {
-  background: $box-color-dark;
+  @include dark-theme();
+  transition: all 1s ease;
 }
 
 .btn {
   @include flexit;
   color: #333;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   border-radius: 5px;
   height: 2.5rem;
   width: 7rem;
@@ -62,21 +97,43 @@ body {
   }
 }
 
-.btn:hover {
+.btn.dark {
+  color: seashell;
+  background: #333;
+}
+
+.btn.lite:hover {
   color: #333;
   background: cyan;
   transition: all 0.4s ease;
   cursor: pointer;
 }
 
+.btn.dark:hover {
+  color: cyan;
+  background: goldenrod;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
 //Background
-div#background {
+#background {
   z-index: -1000;
   position: fixed;
   background-position-x: center;
-  background: url(".././img/oceanfloor.jpg");
+  background-size: cover;
   height: 100vh;
   width: 100vw;
+}
+#background.lite {
+  background: no-repeat url(".././img/oceanfloor.jpg");
+  background-position-x: center;
+  background-size: cover;
+}
+#background.dark {
+  background: no-repeat url(".././img/darkBackground.jpg");
+  background-position-x: center;
+  background-size: cover;
 }
 
 //Background Line layer 1
@@ -115,4 +172,34 @@ div#background {
   border: 2px solid $font-color;
   transition: all 1s;
   z-index: 10;
+}
+
+.techstack .fa-brands {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+i.fa-react {
+  color: turquoise;
+}
+i.fa-bootstrap {
+  color: slateblue;
+}
+i.fa-html5 {
+  color: orange;
+}
+i.fa-css3-alt {
+  color: steelblue;
+}
+i.fa-js {
+  color: goldenrod;
+}
+i.fa-sass {
+  color: palevioletred;
+}
+i.fa-git-alt {
+  color: orangered;
+}
+i.fa-npm {
+  color: green;
 }
