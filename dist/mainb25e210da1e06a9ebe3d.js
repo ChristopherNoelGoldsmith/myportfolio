@@ -1439,9 +1439,11 @@ __webpack_require__.r(__webpack_exports__);
     });
   });
   var moduleContactMe = document.getElementById("contact-me-form").addEventListener("submit", function (event) {
-    var module = ".module";
-    document.forms["contact-me-form"].reset();
-    toggleVis(module);
+    //const module = ".module";
+    //toggleVis(module);
+    setTimeout(function () {
+      return document.forms["contact-me-form"].reset();
+    }, 500);
   });
   (0,_bubbles__WEBPACK_IMPORTED_MODULE_7__["default"])();
   populateImages();
@@ -1450,4 +1452,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main879d7015a62582f5c6a4.js.map
+//# sourceMappingURL=mainb25e210da1e06a9ebe3d.js.map

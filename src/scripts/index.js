@@ -77,9 +77,9 @@ import weatherProject from "../img/weather_project.jpg";
   const moduleContactMe = document
     .getElementById("contact-me-form")
     .addEventListener("submit", (event) => {
-      const module = ".module";
-      document.forms["contact-me-form"].reset();
-      toggleVis(module);
+      //const module = ".module";
+      //toggleVis(module);
+      setTimeout(() => document.forms["contact-me-form"].reset(), 500);
     });
   runCascadingBubbles();
   populateImages();
