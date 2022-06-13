@@ -13,74 +13,77 @@ import "../img/oceanfloor.jpg";
 import makeSomeFlashCards from "../img/makesomeflashcards.jpg";
 import portrait from "../img/portrait.jpg";
 import weatherProject from "../img/weather_project.jpg";
+import universusSim from "../img/universussim.png";
 
 (() => {
-  const populateImages = () => {
-    const myPortrait = (document.getElementById("my-image").src = portrait);
-    const project1 = (document.getElementById("project1-img").src =
-      weatherProject);
-    const project2 = (document.getElementById("project2-img").src =
-      makeSomeFlashCards);
-  };
-  // TOggle functions
+	const populateImages = () => {
+		const myPortrait = (document.getElementById("my-image").src = portrait);
+		const project1 = (document.getElementById("project1-img").src =
+			weatherProject);
+		const project2 = (document.getElementById("project2-img").src =
+			makeSomeFlashCards);
+		const project3 = (document.getElementById("project3-img").src =
+			universusSim);
+	};
+	// TOggle functions
 
-  const switchClass = (element, remove, add) => {
-    element.classList.add(add);
-    element.classList.remove(remove);
-    return;
-  };
+	const switchClass = (element, remove, add) => {
+		element.classList.add(add);
+		element.classList.remove(remove);
+		return;
+	};
 
-  const toggleVis = (elements) => {
-    const toggleVisClass = (el) => {
-      if (!el.contains("vis")) return el.add("vis");
-      return el.remove("vis");
-    };
+	const toggleVis = (elements) => {
+		const toggleVisClass = (el) => {
+			if (!el.contains("vis")) return el.add("vis");
+			return el.remove("vis");
+		};
 
-    if (elements.type === "all") {
-      const elementToMakeVis = document.querySelectorAll(elements.target);
-      elementToMakeVis.forEach((el) => {
-        toggleVisClass(el.classList);
-      });
-    }
-    if (elements.type === "single") {
-      const elementToMakeVis = document.querySelector(
-        elements.target
-      ).classList;
-      toggleVisClass(elementToMakeVis);
-    }
-  };
+		if (elements.type === "all") {
+			const elementToMakeVis = document.querySelectorAll(elements.target);
+			elementToMakeVis.forEach((el) => {
+				toggleVisClass(el.classList);
+			});
+		}
+		if (elements.type === "single") {
+			const elementToMakeVis = document.querySelector(
+				elements.target
+			).classList;
+			toggleVisClass(elementToMakeVis);
+		}
+	};
 
-  const toggleTheme = (theme) => {
-    const elementToMakeVis = document.querySelectorAll(theme.target);
+	const toggleTheme = (theme) => {
+		const elementToMakeVis = document.querySelectorAll(theme.target);
 
-    elementToMakeVis.forEach((el) => {
-      console.log(el);
-      if (theme.target === ".lite") return switchClass(el, "lite", "dark");
-      return switchClass(el, "dark", "lite");
-    });
-  };
-  //
-  const hamburger = document
-    .querySelector("#hamburger")
-    .addEventListener("click", () => {
-      return toggleVis({ type: "all", target: ".nav-btn" });
-    });
+		elementToMakeVis.forEach((el) => {
+			console.log(el);
+			if (theme.target === ".lite") return switchClass(el, "lite", "dark");
+			return switchClass(el, "dark", "lite");
+		});
+	};
+	//
+	const hamburger = document
+		.querySelector("#hamburger")
+		.addEventListener("click", () => {
+			return toggleVis({ type: "all", target: ".nav-btn" });
+		});
 
-  const theme = document
-    .querySelector("#theme-nav")
-    .addEventListener("click", () => {
-      const ifLite = document.querySelector(".lite");
-      if (ifLite !== null) return toggleTheme({ target: ".lite" });
-      return toggleTheme({ target: ".dark" });
-    });
+	const theme = document
+		.querySelector("#theme-nav")
+		.addEventListener("click", () => {
+			const ifLite = document.querySelector(".lite");
+			if (ifLite !== null) return toggleTheme({ target: ".lite" });
+			return toggleTheme({ target: ".dark" });
+		});
 
-  const moduleContactMe = document
-    .getElementById("contact-me-form")
-    .addEventListener("submit", (event) => {
-      //const module = ".module";
-      //toggleVis(module);
-      setTimeout(() => document.forms["contact-me-form"].reset(), 500);
-    });
-  runCascadingBubbles();
-  populateImages();
+	const moduleContactMe = document
+		.getElementById("contact-me-form")
+		.addEventListener("submit", (event) => {
+			//const module = ".module";
+			//toggleVis(module);
+			setTimeout(() => document.forms["contact-me-form"].reset(), 500);
+		});
+	runCascadingBubbles();
+	populateImages();
 })();

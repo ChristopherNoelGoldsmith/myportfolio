@@ -1,141 +1,148 @@
 @use "styles";
 
 section#project-showcase {
-  @include styles.flexit;
-  width: 85vw;
-  flex-direction: column;
-  margin: auto;
+	@include styles.flexit;
+	width: 85vw;
+	flex-direction: column;
+	margin: auto;
 
-  h2 {
-    font-size: styles.$heading-font-size;
-    margin: 3vh 0;
-  }
+	h2 {
+		font-size: styles.$heading-font-size;
+		margin: 3vh 0;
+	}
 
-  div.projects {
-    @include styles.flexit;
-    flex-direction: row;
+	div.projects {
+		@include styles.flexit;
+		flex-direction: row;
 
-    figure.project-image {
-      width: 50vw;
-      background: transparent;
-      padding: 1vh 1vw;
-      margin: 2%;
+		figure.project-image {
+			width: 50vw;
+			background: transparent;
+			padding: 1vh 1vw;
+			margin: 2%;
+			a {
+				z-index: 100;
+				color: styles.$font-color;
+			}
 
-      a {
-        z-index: 100;
-        color: styles.$font-color;
-      }
+			img {
+				width: 100%;
+				max-width: inherit;
+				max-height: 45vw;
+				margin-bottom: 5%;
+				border: 2px solid black;
+			}
 
-      img {
-        width: 100%;
-        max-width: inherit;
-        max-height: 45vw;
-        margin-bottom: 5%;
-        border: 2px solid black;
-      }
+			img:hover {
+				opacity: 0.8;
+				cursor: pointer;
+				transform: scale(1.03);
+				transition: all 1s ease;
+			}
 
-      img:hover {
-        opacity: 0.8;
-        cursor: pointer;
-        transform: scale(1.03);
-        transition: all 1s ease;
-      }
+			label {
+				font-size: 1.2rem;
+				font-weight: 400;
+			}
 
-      label {
-        font-size: 1.2rem;
-        font-weight: 400;
-      }
+			figure.techstack {
+				border-top: 2px black dotted;
 
-      figure.techstack {
-        border-top: 2px black dotted;
+				i {
+					font-size: 2rem;
+					margin: 1%;
+				}
+			}
 
-        i {
-          font-size: 2rem;
-          margin: 1%;
-        }
-      }
+			a i {
+				font-size: 3rem;
+				margin: 3% 0 0 0;
+			}
 
-      a i {
-        font-size: 3rem;
-        margin: 3% 0 0 0;
-      }
+			a i:hover {
+				transform: translateY(-1vh);
+				color: cyan;
+				transition: all 1s ease;
+			}
+		}
 
-      a i:hover {
-        transform: translateY(-1vh);
-        color: cyan;
-        transition: all 1s ease;
-      }
-    }
+		div.project-purpose {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding: 2%;
+			border-radius: 5px;
+			margin: 2%;
+			min-height: 50vh;
 
-    div.project-purpose {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2%;
-      border-radius: 5px;
-      margin: 2%;
-      min-height: 50vh;
+			h3 {
+				font-size: 1.5rem;
+				margin-bottom: 2vh;
+				border-bottom: 1px dotted styles.$font-color;
+			}
 
-      h3 {
-        font-size: 1.5rem;
-        margin-bottom: 2vh;
-        border-bottom: 1px dotted styles.$font-color;
-      }
-
-      ul li {
-        list-style: none;
-        margin: 1vh 0;
-        padding: 1rem;
-        p {
-          span {
-            font-weight: 800;
-          }
-          text-align: left;
-          font-size: 1rem;
-          max-width: 50vw;
-          line-height: 1.5rem;
-        }
-      }
-    }
-  }
+			ul li {
+				list-style: none;
+				margin: 1vh 0;
+				padding: 1rem;
+				p {
+					span {
+						font-weight: 800;
+					}
+					a {
+						text-decoration: none;
+						color: styles.$font-color;
+						transform: scale(1.2);
+					}
+					a:hover {
+						color: cyan;
+					}
+					text-align: left;
+					font-size: 1rem;
+					max-width: 50vw;
+					line-height: 1.5rem;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 768px) {
-  section#project-showcase {
-    flex-direction: column;
+	section#project-showcase {
+		flex-direction: column;
 
-    div.projects {
-      flex-direction: column;
-      width: 95vw;
+		div.projects {
+			flex-direction: column;
+			width: 95vw;
 
-      figure.project-image {
-        width: 80vw;
-        flex-direction: column;
-      }
+			figure.project-image {
+				width: 80vw;
+				flex-direction: column;
+			}
 
-      div.project-purpose {
-        height: auto;
+			div.project-purpose {
+				height: auto;
 
-        ul li {
-          padding: 1rem 0;
-          P {
-            max-width: 75vw;
-          }
-        }
-      }
-    }
-  }
+				ul li {
+					padding: 1rem 0;
+					P {
+						max-width: 75vw;
+					}
+				}
+			}
+		}
+	}
 
-  input {
-    width: 95vw;
+	input {
+		width: 95vw;
 
-    div#text-areasubmit {
-      textarea,
-      input {
-        width: 80vw;
-      }
-    }
-  }
+		div#text-areasubmit {
+			textarea,
+			input {
+				width: 80vw;
+			}
+		}
+	}
 }
