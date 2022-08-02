@@ -5,6 +5,7 @@
 }
 
 body {
+	width: 100vw;
 	background: rgba(20, 20, 20, 1);
 	/* background: radial-gradient(
 		circle,
