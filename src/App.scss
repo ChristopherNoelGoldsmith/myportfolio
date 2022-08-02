@@ -12,6 +12,8 @@
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	background: url("./assets/background.jpg");
+	background-image: url("./assets/background.jpg");
+	background-position: center;
+	background-size: cover;
 	z-index: -100;
 }

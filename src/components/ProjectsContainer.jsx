@@ -1,47 +1,9 @@
 import Project from "./Project";
-import image from "../assets/dummy.png";
+//import image from "../assets/dummy.png";
 import { useEffect, useState } from "react";
 import "./ProjectsContainer.scss";
 import Title from "./Title";
-
-const DUMMY_DATA = [
-	{
-		image: image,
-		title: "E-Commerce Shop & E-Commerce API",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi recusandae qui maxime est velit beatae nobis enim accusamus. Minus dolorem odit, debitis illo similique obcaecati eveniet exercitationem quam consectetur veritatis.",
-		techStack: ["HTML", "SCSS", "React", "Redux", "Express", "MongoDB"],
-		source: "https://github.com/ChristopherNoelGoldsmith/Ecommerce",
-		website: "https://allmightyccg.netlify.app/",
-	},
-	{
-		image: image,
-		title: "E-Commerce Shop & E-Commerce API",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi recusandae qui maxime est velit beatae nobis enim accusamus. Minus dolorem odit, debitis illo similique obcaecati eveniet exercitationem quam consectetur veritatis.",
-		techStack: ["HTML", "SCSS", "React", "Redux", "Express", "MongoDB"],
-		source: "https://github.com/ChristopherNoelGoldsmith/Ecommerce",
-		website: "https://allmightyccg.netlify.app/",
-	},
-	{
-		image: image,
-		title: "E-Commerce Shop & E-Commerce API",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi recusandae qui maxime est velit beatae nobis enim accusamus. Minus dolorem odit, debitis illo similique obcaecati eveniet exercitationem quam consectetur veritatis.",
-		techStack: ["HTML", "SCSS", "React", "Redux", "Express", "MongoDB"],
-		source: "https://github.com/ChristopherNoelGoldsmith/Ecommerce",
-		website: "https://allmightyccg.netlify.app/",
-	},
-	{
-		image: image,
-		title: "E-Commerce Shop & E-Commerce API",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi recusandae qui maxime est velit beatae nobis enim accusamus. Minus dolorem odit, debitis illo similique obcaecati eveniet exercitationem quam consectetur veritatis.",
-		techStack: ["HTML", "SCSS", "React", "Redux", "Express", "MongoDB"],
-		source: "https://github.com/ChristopherNoelGoldsmith/Ecommerce",
-		website: "https://allmightyccg.netlify.app/",
-	},
-];
+import data from "../assets/projects.js";
 
 const createList = (list) => {
 	const contentList = list.map((content) => {
@@ -64,7 +26,7 @@ const ProjectsContainer = (props) => {
 	const [projects, setProjects] = useState();
 
 	useEffect(() => {
-		const newProjects = createList(DUMMY_DATA);
+		const newProjects = createList(data);
 
 		setProjects(newProjects);
 	}, []);
