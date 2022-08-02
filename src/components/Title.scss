@@ -1,0 +1,21 @@
+@use "../mixins.scss";
+
+.line {
+	@include mixins.flex-row;
+	height: 3vh;
+	width: 100%;
+	margin: 2vh 0;
+	h2 {
+		@include mixins.fonts(3.5);
+		text-align: left;
+		width: 90%;
+		margin: 5vh 2vw;
+	}
+	h2::after {
+		content: "";
+		position: absolute;
+		@include mixins.line(4vh, 80vw, transparent);
+		border-bottom: 5px dotted ivory;
+		margin: 0 1vw;
+	}
+}

@@ -1,0 +1,106 @@
+@mixin card($bg, $al) {
+	background: rgba($color: $bg, $alpha: $al);
+	border-radius: 10px;
+	padding: 1rem;
+	margin: 1rem;
+	text-align: center;
+}
+
+@mixin fonts($size) {
+	font-size: 1rem * $size;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	letter-spacing: 1.2px;
+	color: whitesmoke;
+}
+
+@mixin shadow($bg, $al) {
+	box-shadow: 3.5px 3px 2.5px 2.5px rgba($color: $bg, $alpha: $al);
+}
+
+@mixin line($h, $w, $color) {
+	width: $w;
+	height: $h;
+	background: $color;
+}
+
+@mixin right-chevron($bg, $al) {
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+	background: $bg;
+	opacity: $al;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+
+//flex
+@mixin flex-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+//MEDIA QUERIES
+
+$breakpoints: (
+	"xs": 0px,
+	"sm": 480px,
+	"md": 720px,
+	"lg": 960px,
+	"xl": 1200px,
+);
+
+//MEDIA QUERIES
+@mixin xs {
+	@media (min-width: map-get($breakpoints, "xs")) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media (min-width: map-get($breakpoints, "sm")) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (min-width: map-get($breakpoints, "md")) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (min-width: map-get($breakpoints, "lg")) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media (min-width: map-get($breakpoints, "xl")) {
+		@content;
+	}
+}
+
+//animations
+
+@keyframes slide-in-left {
+	from {
+		transform: translateX(1000px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+@mixin ani($animation, $time, $type) {
+	animation: $animation $time $type;
+}

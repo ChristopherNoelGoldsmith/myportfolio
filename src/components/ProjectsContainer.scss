@@ -1,0 +1,7 @@
+@use "../mixins.scss";
+
+.projects-container {
+	@include mixins.flex-column;
+	flex-wrap: wrap;
+	width: 100vw;
+}

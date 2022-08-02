@@ -1,0 +1,17 @@
+@use "./mixins.scss";
+
+.container {
+	@include mixins.flex-column;
+	overflow-x: hidden;
+}
+.container::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background: url("./assets/background.jpg");
+	z-index: -100;
+}

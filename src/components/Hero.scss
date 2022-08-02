@@ -1,0 +1,29 @@
+@use "../mixins.scss";
+.hero {
+	@include mixins.flex-column;
+	text-align: left;
+	width: 80%;
+	height: 100vh;
+	.title-con {
+		@include mixins.flex-row;
+		justify-content: left;
+		width: 100%;
+		h1 {
+			@include mixins.fonts(3.5);
+			width: 100%;
+		}
+		h2 {
+			@include mixins.fonts(2);
+			width: 60%;
+		}
+	}
+	.contact {
+		@include mixins.fonts(0.9);
+		width: 100%;
+		li {
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+}
