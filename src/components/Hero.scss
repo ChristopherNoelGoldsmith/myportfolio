@@ -1,27 +1,38 @@
 @use "../mixins.scss";
 .hero {
 	@include mixins.flex-column;
-	text-align: left;
-	width: 80%;
+	width: 95%;
+	@include mixins.md {
+		text-align: left;
+		width: 80%;
+	}
 	height: 100vh;
 	.title-con {
 		@include mixins.flex-row;
-		justify-content: left;
+		@include mixins.md {
+			justify-content: left;
+		}
 		width: 100%;
 		h1 {
 			@include mixins.fonts(3.5);
 			width: 100%;
+			margin: 5vh 0;
 		}
 		h2 {
 			@include mixins.fonts(2);
 			color: darkgray;
 			width: 60%;
+			margin: 3vh 0;
 		}
 	}
 	.contact {
 		@include mixins.fonts(0.9);
 		width: 100%;
-		li {
+		p {
+			margin: 2vh 0;
+			i {
+				margin: 0 3px;
+			}
 			span {
 				font-weight: 700;
 			}

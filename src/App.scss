@@ -3,17 +3,19 @@
 .container {
 	@include mixins.flex-column;
 	overflow-x: hidden;
+	max-width: 100vw;
 }
 .container::after {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	position: fixed;
 	background-image: url("./assets/background.jpg");
 	background-position: center;
 	background-size: cover;
 	z-index: -100;
+	overflow: hidden;
 }

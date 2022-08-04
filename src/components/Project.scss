@@ -27,7 +27,12 @@ section.project {
 	}
 	.description::after {
 		content: "";
-		background: black;
+		background: rgba($color: black, $alpha: 0.8);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		bottom: 0;
 		@include mixins.md {
 			$gradient: linear-gradient(
 				176deg,
@@ -44,22 +49,31 @@ section.project {
 		@include mixins.card(violet, 0.7);
 		@include mixins.flex-column;
 		@include mixins.ani(slide-in-left, 1s, linear);
-		max-width: 40vw;
+		max-width: 95vw;
+		padding: 3rem;
+		padding: 0.5rem;
+		@include mixins.md {
+			max-width: 40vw;
+			padding: 3rem;
+		}
 		position: relative;
 		z-index: 10;
 		.picture {
-			max-width: 30vw;
 			width: 90%;
-
+			max-width: 80vw;
+			@include mixins.md {
+				width: 100%;
+			}
 			img {
 				width: inherit;
-				width: 30vw;
+				width: 100%;
 				border-radius: 5px;
 				border: 2px solid black;
 			}
 		}
 		ul {
 			@include mixins.flex-row;
+			padding: 0;
 			width: 80%;
 			flex-wrap: wrap;
 		}
@@ -73,14 +87,15 @@ section.project {
 	ul {
 		@include mixins.flex-row;
 		list-style: none;
+		padding: 0;
 		li {
 			@include mixins.card(#333, 1);
 			@include mixins.fonts(1.1);
 			@include mixins.shadow(black, 0.2);
 			@include mixins.flex-column;
 			transition: 0.3s ease-in-out;
-			margin: 2px;
-			padding: 3px 1rem;
+			margin: 5px;
+			padding: 5px 1rem;
 			a {
 				width: 100%;
 				height: 100%;

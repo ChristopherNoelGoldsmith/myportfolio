@@ -8,15 +8,7 @@ const projects = [
 		title: "E-Commerce Shop & E-Commerce API",
 		description:
 			"Allmighty CCG is a fully functional rough draft, of an e-commerce website.  It features 144 products, an animated cart, Login, Password Change,  and payment through stripe.  To attempt a test payment use any information and any card number ending in 4242.  Password reset and other features built into the API coming soon to the frontend.",
-		techStack: [
-			"HTML",
-			"SASS",
-			"React",
-			"Redux",
-			"Express",
-			"MongoDB",
-			"Stripe",
-		],
+		techStack: ["HTML", "SASS", "React", "Express", "MongoDB", "Stripe"],
 		source: "https://github.com/ChristopherNoelGoldsmith/Ecommerce",
 		website: "https://allmightyccg.netlify.app/",
 	},
