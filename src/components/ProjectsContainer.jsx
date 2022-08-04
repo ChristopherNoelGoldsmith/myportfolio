@@ -9,6 +9,7 @@ const createList = (list) => {
 	const contentList = list.map((content) => {
 		return (
 			<Project
+				key={Math.floor(Math.random() * 100000)}
 				image={content.image}
 				title={content.title}
 				description={content.description}

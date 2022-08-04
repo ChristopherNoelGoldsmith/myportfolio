@@ -18,11 +18,15 @@
 			width: 100%;
 			margin: 5vh 0;
 		}
-		h2 {
+		p {
 			@include mixins.fonts(2);
 			color: darkgray;
 			width: 60%;
 			margin: 3vh 0;
+			span {
+				color: white;
+				border-bottom: 1px solid white;
+			}
 		}
 	}
 	.contact {

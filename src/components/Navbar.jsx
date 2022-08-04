@@ -21,7 +21,7 @@ const navList = [
 const navListDir = (list) => {
 	return list.map((item) => {
 		return (
-			<li>
+			<li key={Math.floor(Math.random() * 100000)}>
 				<a href={item.href} target="_blank">
 					<div className="text" text={item.text}></div>
 					{item.icon}

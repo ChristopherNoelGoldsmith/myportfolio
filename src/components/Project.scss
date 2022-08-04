@@ -20,7 +20,7 @@ section.project {
 			text-shadow: 3px 2px rgba($color: black, $alpha: 0.5);
 		}
 		p {
-			@include mixins.fonts(1);
+			@include mixins.fonts(1.1);
 			@include mixins.card(black, 1);
 			@include mixins.shadow(black, 0.5);
 		}
@@ -48,7 +48,6 @@ section.project {
 		@include mixins.shadow(black, 0.5);
 		@include mixins.card(violet, 0.7);
 		@include mixins.flex-column;
-		@include mixins.ani(slide-in-left, 1s, linear);
 		max-width: 95vw;
 		padding: 3rem;
 		padding: 0.5rem;
@@ -103,5 +102,12 @@ section.project {
 				@include mixins.fonts(0.9);
 			}
 		}
+	}
+}
+
+.visible {
+	@include mixins.ani(fade-in, 1.5s, linear);
+	@include mixins.md {
+		@include mixins.ani(slide-in-left, 1s, linear);
 	}
 }
