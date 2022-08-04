@@ -21,6 +21,7 @@
 	width: $w;
 	height: $h;
 	background: $color;
+	overflow: hidden;
 }
 
 @mixin right-chevron($bg, $al) {

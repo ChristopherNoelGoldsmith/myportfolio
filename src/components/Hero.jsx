@@ -7,15 +7,17 @@ const Hero = (props) => {
 			</div>
 			<div className={"title-con"}>
 				<h2>
-					I have over year of experience in developement, and am excited that
-					you have decided to visit my page!
+					My Name Is Christopher Goldsmith. I have over one year of developement
+					experience. Thanks for visiting my page!
 				</h2>
 			</div>
 			<section className={"contact"}>
 				<p>
+					<i className="fa-solid fa-phone"></i>
 					<span>PHONE</span>: 702-666-9106
 				</p>
 				<p>
+					<i className="fa-solid fa-envelope"> </i>
 					<span>EMAIL</span>: ChristopherGoldsmith101@yahoo.com
 				</p>
 			</section>
