@@ -2,24 +2,15 @@
 
 .line {
 	@include mixins.flex-row;
-	justify-content: left;
 	height: 3vh;
-	width: 100vw;
+	width: 90vw;
 	margin: 2vh 0;
 	h2 {
 		@include mixins.fonts(3.5);
 		text-align: left;
-		width: 90%;
 		margin: 5vh 2vw;
-		overflow: hidden;
 	}
-	h2::after {
-		content: "";
-		position: absolute;
-		@include mixins.line(4vh, 30vw, transparent);
-		border-bottom: 5px dotted ivory;
-		margin: 0 1vw;
-		max-width: 70%;
-		overflow: hidden;
+	span {
+		@include mixins.line-hor(80%, 5px, white);
 	}
 }

@@ -6,17 +6,13 @@ import { Helmet } from "react-helmet";
 import { useState } from "react";
 
 function App() {
-	const [prevPose, setPose] = useState();
-	window.scroll(() => {
-		const currentPose = window.scrollY;
-
-		if (currentPose > prevPose) return;
-
-		setPose(window.scrollY);
-	});
-
 	return (
-		<div className="container">
+		<div
+			className="container"
+			onScroll={(e) => {
+				return console.log(e);
+			}}
+		>
 			<Navbar />
 			<Hero />
 			<ProjectsContainer />

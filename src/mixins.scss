@@ -17,10 +17,17 @@
 	box-shadow: 3.5px 3px 2.5px 2.5px rgba($color: $bg, $alpha: $al);
 }
 
-@mixin line($h, $w, $color) {
+@mixin line-hor($w, $h, $color) {
 	width: $w;
+	height: 1vh;
+	border-bottom: $h dotted $color;
+	overflow: hidden;
+}
+
+@mixin line-vert($h, $w, $color) {
+	width: 1vw;
 	height: $h;
-	background: $color;
+	border-left: dotted $w $color;
 	overflow: hidden;
 }
 
@@ -99,6 +106,15 @@ $breakpoints: (
 	}
 	to {
 		transform: translateX(0px);
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
 

@@ -6,10 +6,10 @@ const Hero = (props) => {
 				<h1>Hello, I am a Frontend Web Developer</h1>
 			</div>
 			<div className={"title-con"}>
-				<h2>
-					My Name Is Christopher Goldsmith. I have over one year of developement
-					experience. Thanks for visiting my page!
-				</h2>
+				<p>
+					My Name Is <span>Christopher Goldsmith</span>. I have over one year of
+					developement experience. Thanks for visiting my page!
+				</p>
 			</div>
 			<section className={"contact"}>
 				<p>

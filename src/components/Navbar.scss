@@ -6,6 +6,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	padding: 0 3vw;
 	justify-content: space-between;
 	z-index: 100;
 	overflow: hidden;
@@ -27,7 +28,7 @@
 		}
 		li {
 			position: relative;
-			@include mixins.fonts(3);
+			@include mixins.fonts(1.8);
 			margin: 1rem 1rem;
 			padding: 0.6rem;
 			.text::after {
@@ -52,4 +53,9 @@
 			}
 		}
 	}
+}
+
+.not-vis {
+	transform: translateY(-100px);
+	opacity: 0;
 }
