@@ -6,6 +6,7 @@ section.project {
 	@include mixins.md {
 		@include mixins.flex-row;
 	}
+	@include mixins.ani(fade-in, 0.3s, linear);
 	justify-content: space-evenly;
 	position: relative;
 	margin: 2%;
