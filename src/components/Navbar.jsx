@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Navbar.scss";
 import { scrollEvent } from "./utilities";
+import icon from "../assets/icon.png";
+import { Fragment } from "react";
 const navList = [
 	{
 		icon: <i className="fa-brands fa-linkedin"></i>,
@@ -52,6 +54,8 @@ const Navbar = (props) => {
 
 	return (
 		<nav className={`navbar`}>
+			<img src={icon} alt="website icon" />
+
 			<div className={`navbar ${navClassVis}`}>
 				<h1>
 					<span></span>
