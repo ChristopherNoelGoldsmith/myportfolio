@@ -1,6 +1,7 @@
 import image from "./dummy.png";
 import allmighty from "./am1.png";
 import weather from "./weather.png";
+import stoncks from "./neonmarket.jpg";
 
 const projects = [
 	{
@@ -11,6 +12,15 @@ const projects = [
 		techStack: ["HTML", "SASS", "React", "Express", "MongoDB", "Stripe"],
 		source: "https://github.com/ChristopherNoelGoldsmith/Ecommerce",
 		website: "https://allmightyccg.netlify.app/",
+	},
+	{
+		image: stoncks,
+		title: "Market Masters",
+		description:
+			"Market Masters is a stock market insights tool.  At the moment you can track the quarterly EPS, market cap, current price and shares outstanding of a company.  Upcoming features include: related news, company financials, and market news.",
+		techStack: ["HTML", "SASS", "React"],
+		source: "https://github.com/ChristopherNoelGoldsmith/stocks",
+		website: "https://marketmasters.netlify.app/",
 	},
 	{
 		image: image,
@@ -26,7 +36,7 @@ const projects = [
 		title: "Weather App",
 		description:
 			"This application was my first javascript project (outside of a class or tutorial).  It utilizes a reverse geocoder api to obtain the latitude and longitude of a location, and a weather api to give the average forecast of the next 14 days of a chosen location.  It also features a favorites menus powered by local storage.",
-		techStack: ["HTML", "SCSS", "Javascript"],
+		techStack: ["HTML", "SASS", "Javascript"],
 		source: "https://github.com/ChristopherNoelGoldsmith/weather_app",
 		website: "https://forcastdeck.netlify.app/",
 	},

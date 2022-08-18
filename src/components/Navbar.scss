@@ -10,6 +10,13 @@
 	justify-content: space-between;
 	z-index: 100;
 	overflow: hidden;
+	img {
+		width: 50px;
+		height: 50px;
+		top: 0;
+		left: 0;
+		margin: 10px;
+	}
 	h1 {
 		display: none;
 		@include mixins.sm {
