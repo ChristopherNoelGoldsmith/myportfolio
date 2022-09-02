@@ -79,9 +79,24 @@ section.project {
 	}
 	.source li:hover {
 		transform: scale(1.05);
-		opacity: 0.9;
-		background: violet;
+		background: skyblue;
 		transition: 0.8s ease-in-out;
+	}
+	.source li {
+		border: 2px solid skyblue;
+		border-radius: 5px;
+		background: rgba($color: black, $alpha: 0.3);
+		min-width: 15%;
+		height: 40%;
+		margin: 5px;
+		padding: 5px;
+
+		a {
+			@include mixins.fonts(1.2);
+			text-decoration: none;
+			color: white;
+			padding: 5px;
+		}
 	}
 	ul {
 		@include mixins.flex-row;
