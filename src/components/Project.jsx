@@ -10,7 +10,7 @@ const makeTechStack = (tech) => {
 // /${entry.IntersectionObserverEntry && "visible"}
 const Project = (props) => {
 	const [techStack, setTechStack] = useState();
-	const { ref, inView, entry } = useInView({
+	const { ref, inView } = useInView({
 		trackVisibility: true,
 		delay: 100,
 		triggerOnce: true,

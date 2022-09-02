@@ -33,7 +33,7 @@ const ProjectsContainer = (props) => {
 	}, []);
 
 	return (
-		<section className={"projects-container"}>
+		<section id={"projects"} className={"projects-container"}>
 			<Title title={"Projects"} />
 			{projects}
 		</section>

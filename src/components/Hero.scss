@@ -1,12 +1,17 @@
 @use "../mixins.scss";
 .hero {
+	* {
+		@include mixins.ani(fade-in, 1s, linear);
+	}
 	@include mixins.flex-column;
+	height: 200vh;
 	width: 95%;
+
 	@include mixins.md {
 		text-align: left;
 		width: 80%;
+		height: 100vh;
 	}
-	height: 100vh;
 	.title-con {
 		@include mixins.flex-row;
 		@include mixins.md {
@@ -23,9 +28,12 @@
 			color: #ddd;
 			width: 60%;
 			margin: 3vh 0;
-			span {
+			span.highlight {
 				color: white;
 				border-bottom: 1px solid white;
+			}
+			span.blue {
+				color: skyblue;
 			}
 		}
 	}
@@ -39,6 +47,29 @@
 			}
 			span {
 				font-weight: 700;
+			}
+		}
+		.buttons {
+			@include mixins.flex-column;
+			align-items: flex-start;
+			button {
+				border: 2px solid skyblue;
+				border-radius: 5px;
+				background: transparent;
+				min-width: 15%;
+				height: 40%;
+				margin: 5px;
+				padding: 5px;
+
+				a {
+					@include mixins.fonts(1.2);
+					text-decoration: none;
+					color: white;
+					padding: 5px;
+				}
+			}
+			button:hover {
+				background: skyblue;
 			}
 		}
 	}

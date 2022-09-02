@@ -3,7 +3,7 @@ import ProjectsContainer from "./components/ProjectsContainer";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import { Helmet } from "react-helmet";
-import { useState } from "react";
+import AboutMe from "./components/AboutMe";
 
 function App() {
 	return (
@@ -16,7 +16,7 @@ function App() {
 			<Navbar />
 			<Hero />
 			<ProjectsContainer />
-
+			<AboutMe />
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>Christopher Goldsmith Dev</title>

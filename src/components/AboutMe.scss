@@ -1,0 +1,76 @@
+@use "../mixins.scss";
+
+.row {
+	@include mixins.flex-column;
+
+	@include mixins.md {
+		@include mixins.flex-row;
+	}
+	margin: 5vh;
+}
+
+.background-me {
+	@include mixins.flex-column;
+	width: 100%;
+	@include mixins.md {
+		text-align: left;
+		width: 100%;
+	}
+	background: rgba($color: black, $alpha: 0.9);
+	box-shadow: 5px 5px black;
+	height: 100vh;
+	padding: 5vh 0;
+
+	figure.vegas-img {
+		@include mixins.flex-column;
+
+		width: 100%;
+		height: 100%;
+		img {
+			max-width: 100%;
+			border-radius: 5px;
+			@include mixins.md {
+				max-height: 50vh;
+				max-width: 50vw;
+				box-shadow: 5px 5px black;
+			}
+		}
+	}
+	.about-me {
+		@include mixins.flex-column;
+		width: 95%;
+		@include mixins.md {
+			text-align: left;
+			width: 95%;
+		}
+		height: 95%;
+
+		h2 {
+			@include mixins.fonts(2);
+			width: 100%;
+			margin: 5vh 0;
+			text-align: center;
+		}
+		p {
+			@include mixins.fonts(1.2);
+			color: #ddd;
+			width: 60%;
+			margin: 3vh 0;
+			span.highlight {
+				color: white;
+				border-bottom: 1px solid white;
+			}
+			span.blue {
+				color: skyblue;
+			}
+			span.fierce {
+				@include mixins.fonts(1.5);
+				color: gold;
+			}
+		}
+	}
+}
+
+.visable-fade {
+	@include mixins.ani(fade-in, 3s, ease-out);
+}
