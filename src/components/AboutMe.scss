@@ -18,7 +18,7 @@
 	}
 	background: rgba($color: black, $alpha: 0.9);
 	box-shadow: 5px 5px black;
-	height: 100vh;
+	min-height: 100vh;
 	padding: 5vh 0;
 
 	figure.vegas-img {
@@ -38,13 +38,10 @@
 	}
 	.about-me {
 		@include mixins.flex-column;
-		width: 95%;
 		@include mixins.md {
 			text-align: left;
 			width: 95%;
 		}
-		height: 95%;
-
 		h2 {
 			@include mixins.fonts(2);
 			width: 100%;
@@ -54,7 +51,10 @@
 		p {
 			@include mixins.fonts(1.2);
 			color: #ddd;
-			width: 60%;
+			width: 100%;
+			include mixins.md {
+				width: 60%;
+			}
 			margin: 3vh 0;
 			span.highlight {
 				color: white;

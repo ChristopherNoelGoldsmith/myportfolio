@@ -6,7 +6,6 @@
 	@include mixins.flex-column;
 	height: 200vh;
 	width: 95%;
-
 	@include mixins.md {
 		text-align: left;
 		width: 80%;
@@ -25,8 +24,12 @@
 		}
 		p {
 			@include mixins.fonts(2);
+			width: 100%;
+			@include mixins.md {
+				width: 60%;
+			}
 			color: #ddd;
-			width: 60%;
+
 			margin: 3vh 0;
 			span.highlight {
 				color: white;
