@@ -4,8 +4,10 @@
 		@include mixins.ani(fade-in, 1s, linear);
 	}
 	@include mixins.flex-column;
-	height: 200vh;
+	justify-content: flex-start;
+	height: 100vh;
 	width: 95%;
+	margin: 10vh 0;
 	@include mixins.md {
 		text-align: left;
 		width: 80%;
@@ -18,15 +20,19 @@
 		}
 		width: 100%;
 		h1 {
-			@include mixins.fonts(3.5);
 			width: 100%;
 			margin: 5vh 0;
+			@include mixins.fonts(2.5);
+			@include mixins.md {
+				@include mixins.fonts(3.5);
+			}
 		}
 		p {
-			@include mixins.fonts(2);
+			@include mixins.fonts(1.2);
 			width: 100%;
 			@include mixins.md {
 				width: 60%;
+				@include mixins.fonts(2);
 			}
 			color: #ddd;
 
