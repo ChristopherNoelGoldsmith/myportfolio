@@ -29,11 +29,15 @@ const AboutMe = (props) => {
 							I was a LEGO child. I have always loved building things, taking
 							them apart, and understanding how they work. Gravitating towards
 							development was natural for me. My first exposure was in 2019,
-							trying to make javascript plugins for RPG Maker MV. I made a few
-							small projects that are lost on an old pc. At the time, it was
-							just a hobby, however after being exposed to web development and
-							the other nuances of the industry; I am hooked. Thanks for reading
+							trying to make JavaScript plugins for RPG Maker MV. I made a few
+							small projects that are lost on an old PC. At the time, it was
+							just a hobby; however, after being exposed to web development and
+							the other nuances of the industry, I am hooked. Thanks for reading
 							my bio!
+							<br />
+							<br />I am currently a student at Southern New Hampshire
+							University, pursuing a Bachelor's Degree in Computer Science with
+							a focus on Software Engineering!
 						</p>
 					</div>
 				</div>

@@ -3,13 +3,13 @@ const Hero = (props) => {
 	return (
 		<main className={"hero"}>
 			<div className={"title-con"}>
-				<h1>Hello, I am a Frontend Web Developer</h1>
+				<h1>Hello, I am a Software Developer</h1>
 			</div>
 			<div className={"title-con"}>
 				<p>
 					My Name Is <span className={"highlight"}>Christopher Goldsmith</span>.
 					I am a software engineer specializing in
-					<span className={"blue"}> React</span> delopment and other frontend
+					<span className={"blue"}> React</span> development and other frontend
 					technologies.
 					<br />
 					<br />
