@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./Navbar.scss";
 import { scrollEvent } from "./utilities";
 import icon from "../assets/icon.png";
-import { Fragment } from "react";
 import resume from "../assets/resume.pdf";
 
 const navList = [
@@ -28,7 +27,7 @@ const navListDir = (list) => {
 	return list.map((item) => {
 		return (
 			<li key={Math.floor(Math.random() * 100000)}>
-				<a href={resume} target="_blank" download={item.download}>
+				<a href={item.href} target="_blank" download={item.download}>
 					<div className="text" text={item.text}></div>
 					{item.icon}
 				</a>
